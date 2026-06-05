@@ -1,0 +1,10 @@
+base_locale: en
+fallback_strategy: base_locale
+input_directory: lib/src/i18n
+input_file_pattern: .json
+output_directory: lib/src/generated
+flutter_integration: true
+string_interpolation: braces
+render_flat_map: false
+render_named_arguments: true
+translation_overrides: false

@@ -1,0 +1,39 @@
+name: Quality Check
+
+on:
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+
+      - name: Get Flutter version from .fvmrc
+        id: fvm-version
+        run: echo "version=$(jq -r .flutter .fvmrc)" >> "$GITHUB_OUTPUT"
+
+      - name: Set up Flutter
+        uses: subosito/flutter-action@v2
+        with:
+          flutter-version: ${{ steps.fvm-version.outputs.version }}
+          cache: true
+
+      - name: Install dependencies
+        run: flutter pub get
+
+      - name: Generate translations
+        run: dart run slang
+
+      - name: Check for changes
+        run: |
+          if [ -n "$(git status --porcelain)" ]; then
+            echo "Error: Translations are not up to date. Please run 'dart run slang' locally and commit the changes."
+            git status
+            exit 1
+          fi
+
+      - name: Analyze
+        run: flutter analyze
