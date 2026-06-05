@@ -1,0 +1,10 @@
+name: aura_i18n_example
+description: "Example usage of the aura_i18n package."
+publish_to: 'none'
+
+environment:
+  sdk: ^3.0.0
+
+dependencies:
+  aura_i18n:
+    path: ../
