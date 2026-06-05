@@ -10,12 +10,12 @@ void main() {
 
     test('Should translate simple key in English', () {
       LocaleSettings.setLocale(AppLocale.en);
-      expect(t.title, 'Aura');
+      expect(t.aura, 'Aura');
     });
 
     test('Should translate simple key in French', () async {
       await LocaleSettings.setLocale(AppLocale.fr);
-      expect(t.title, 'Aura');
+      expect(t.aura, 'Aura');
     });
   });
 }

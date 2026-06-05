@@ -40,56 +40,56 @@ class TranslationsFr extends Translations with BaseTranslations<AppLocale, Trans
 
 	// Translations
 	@override String get aura => 'Aura';
-	@override late final _TranslationsCommonFr common = _TranslationsCommonFr._(_root);
-	@override late final _TranslationsAuthFr auth = _TranslationsAuthFr._(_root);
-	@override late final _TranslationsProfileFr profile = _TranslationsProfileFr._(_root);
-	@override late final _TranslationsSettingsFr settings = _TranslationsSettingsFr._(_root);
-	@override late final _TranslationsMenuFr menu = _TranslationsMenuFr._(_root);
-	@override late final _TranslationsNetworkFr network = _TranslationsNetworkFr._(_root);
+	@override late final _Translations$common$fr common = _Translations$common$fr._(_root);
+	@override late final _Translations$auth$fr auth = _Translations$auth$fr._(_root);
+	@override late final _Translations$profile$fr profile = _Translations$profile$fr._(_root);
+	@override late final _Translations$settings$fr settings = _Translations$settings$fr._(_root);
+	@override late final _Translations$menu$fr menu = _Translations$menu$fr._(_root);
+	@override late final _Translations$network$fr network = _Translations$network$fr._(_root);
 }
 
 // Path: common
-class _TranslationsCommonFr extends TranslationsCommonEn {
-	_TranslationsCommonFr._(TranslationsFr root) : this._root = root, super.internal(root);
+class _Translations$common$fr extends Translations$common$en {
+	_Translations$common$fr._(TranslationsFr root) : this._root = root, super.internal(root);
 
 	final TranslationsFr _root; // ignore: unused_field
 
 	// Translations
-	@override late final _TranslationsCommonFieldsFr fields = _TranslationsCommonFieldsFr._(_root);
-	@override late final _TranslationsCommonActionsFr actions = _TranslationsCommonActionsFr._(_root);
-	@override late final _TranslationsCommonDialogFr dialog = _TranslationsCommonDialogFr._(_root);
+	@override late final _Translations$common$fields$fr fields = _Translations$common$fields$fr._(_root);
+	@override late final _Translations$common$actions$fr actions = _Translations$common$actions$fr._(_root);
+	@override late final _Translations$common$dialog$fr dialog = _Translations$common$dialog$fr._(_root);
 	@override String get notImplemented => 'Non implémenté pour le moment.';
 }
 
 // Path: auth
-class _TranslationsAuthFr extends TranslationsAuthEn {
-	_TranslationsAuthFr._(TranslationsFr root) : this._root = root, super.internal(root);
+class _Translations$auth$fr extends Translations$auth$en {
+	_Translations$auth$fr._(TranslationsFr root) : this._root = root, super.internal(root);
 
 	final TranslationsFr _root; // ignore: unused_field
 
 	// Translations
-	@override late final _TranslationsAuthHeaderFr header = _TranslationsAuthHeaderFr._(_root);
+	@override late final _Translations$auth$header$fr header = _Translations$auth$header$fr._(_root);
 	@override String get forgotPassword => 'Mot de passe oublié ?';
 	@override String get login => 'Se connecter';
 	@override String get register => 'S\'inscrire';
-	@override late final _TranslationsAuthOauthFr oauth = _TranslationsAuthOauthFr._(_root);
-	@override late final _TranslationsAuthErrorFr error = _TranslationsAuthErrorFr._(_root);
+	@override late final _Translations$auth$oauth$fr oauth = _Translations$auth$oauth$fr._(_root);
+	@override late final _Translations$auth$error$fr error = _Translations$auth$error$fr._(_root);
 }
 
 // Path: profile
-class _TranslationsProfileFr extends TranslationsProfileEn {
-	_TranslationsProfileFr._(TranslationsFr root) : this._root = root, super.internal(root);
+class _Translations$profile$fr extends Translations$profile$en {
+	_Translations$profile$fr._(TranslationsFr root) : this._root = root, super.internal(root);
 
 	final TranslationsFr _root; // ignore: unused_field
 
 	// Translations
-	@override late final _TranslationsProfileInfoFr info = _TranslationsProfileInfoFr._(_root);
-	@override late final _TranslationsProfileChangePasswordFr changePassword = _TranslationsProfileChangePasswordFr._(_root);
+	@override late final _Translations$profile$info$fr info = _Translations$profile$info$fr._(_root);
+	@override late final _Translations$profile$changePassword$fr changePassword = _Translations$profile$changePassword$fr._(_root);
 }
 
 // Path: settings
-class _TranslationsSettingsFr extends TranslationsSettingsEn {
-	_TranslationsSettingsFr._(TranslationsFr root) : this._root = root, super.internal(root);
+class _Translations$settings$fr extends Translations$settings$en {
+	_Translations$settings$fr._(TranslationsFr root) : this._root = root, super.internal(root);
 
 	final TranslationsFr _root; // ignore: unused_field
 
@@ -99,13 +99,13 @@ class _TranslationsSettingsFr extends TranslationsSettingsEn {
 	@override String get helpCenter => 'Centre d\'aide';
 	@override String get reportIssue => 'Signaler un problème';
 	@override String get termsOfUse => 'Conditions d\'utilisation';
-	@override late final _TranslationsSettingsDeleteAccountFr deleteAccount = _TranslationsSettingsDeleteAccountFr._(_root);
+	@override late final _Translations$settings$deleteAccount$fr deleteAccount = _Translations$settings$deleteAccount$fr._(_root);
 	@override String get disconnect => 'Se déconnecter';
 }
 
 // Path: menu
-class _TranslationsMenuFr extends TranslationsMenuEn {
-	_TranslationsMenuFr._(TranslationsFr root) : this._root = root, super.internal(root);
+class _Translations$menu$fr extends Translations$menu$en {
+	_Translations$menu$fr._(TranslationsFr root) : this._root = root, super.internal(root);
 
 	final TranslationsFr _root; // ignore: unused_field
 
@@ -116,8 +116,8 @@ class _TranslationsMenuFr extends TranslationsMenuEn {
 }
 
 // Path: network
-class _TranslationsNetworkFr extends TranslationsNetworkEn {
-	_TranslationsNetworkFr._(TranslationsFr root) : this._root = root, super.internal(root);
+class _Translations$network$fr extends Translations$network$en {
+	_Translations$network$fr._(TranslationsFr root) : this._root = root, super.internal(root);
 
 	final TranslationsFr _root; // ignore: unused_field
 
@@ -132,8 +132,8 @@ class _TranslationsNetworkFr extends TranslationsNetworkEn {
 }
 
 // Path: common.fields
-class _TranslationsCommonFieldsFr extends TranslationsCommonFieldsEn {
-	_TranslationsCommonFieldsFr._(TranslationsFr root) : this._root = root, super.internal(root);
+class _Translations$common$fields$fr extends Translations$common$fields$en {
+	_Translations$common$fields$fr._(TranslationsFr root) : this._root = root, super.internal(root);
 
 	final TranslationsFr _root; // ignore: unused_field
 
@@ -147,8 +147,8 @@ class _TranslationsCommonFieldsFr extends TranslationsCommonFieldsEn {
 }
 
 // Path: common.actions
-class _TranslationsCommonActionsFr extends TranslationsCommonActionsEn {
-	_TranslationsCommonActionsFr._(TranslationsFr root) : this._root = root, super.internal(root);
+class _Translations$common$actions$fr extends Translations$common$actions$en {
+	_Translations$common$actions$fr._(TranslationsFr root) : this._root = root, super.internal(root);
 
 	final TranslationsFr _root; // ignore: unused_field
 
@@ -165,8 +165,8 @@ class _TranslationsCommonActionsFr extends TranslationsCommonActionsEn {
 }
 
 // Path: common.dialog
-class _TranslationsCommonDialogFr extends TranslationsCommonDialogEn {
-	_TranslationsCommonDialogFr._(TranslationsFr root) : this._root = root, super.internal(root);
+class _Translations$common$dialog$fr extends Translations$common$dialog$en {
+	_Translations$common$dialog$fr._(TranslationsFr root) : this._root = root, super.internal(root);
 
 	final TranslationsFr _root; // ignore: unused_field
 
@@ -175,8 +175,8 @@ class _TranslationsCommonDialogFr extends TranslationsCommonDialogEn {
 }
 
 // Path: auth.header
-class _TranslationsAuthHeaderFr extends TranslationsAuthHeaderEn {
-	_TranslationsAuthHeaderFr._(TranslationsFr root) : this._root = root, super.internal(root);
+class _Translations$auth$header$fr extends Translations$auth$header$en {
+	_Translations$auth$header$fr._(TranslationsFr root) : this._root = root, super.internal(root);
 
 	final TranslationsFr _root; // ignore: unused_field
 
@@ -186,8 +186,8 @@ class _TranslationsAuthHeaderFr extends TranslationsAuthHeaderEn {
 }
 
 // Path: auth.oauth
-class _TranslationsAuthOauthFr extends TranslationsAuthOauthEn {
-	_TranslationsAuthOauthFr._(TranslationsFr root) : this._root = root, super.internal(root);
+class _Translations$auth$oauth$fr extends Translations$auth$oauth$en {
+	_Translations$auth$oauth$fr._(TranslationsFr root) : this._root = root, super.internal(root);
 
 	final TranslationsFr _root; // ignore: unused_field
 
@@ -198,8 +198,8 @@ class _TranslationsAuthOauthFr extends TranslationsAuthOauthEn {
 }
 
 // Path: auth.error
-class _TranslationsAuthErrorFr extends TranslationsAuthErrorEn {
-	_TranslationsAuthErrorFr._(TranslationsFr root) : this._root = root, super.internal(root);
+class _Translations$auth$error$fr extends Translations$auth$error$en {
+	_Translations$auth$error$fr._(TranslationsFr root) : this._root = root, super.internal(root);
 
 	final TranslationsFr _root; // ignore: unused_field
 
@@ -212,19 +212,19 @@ class _TranslationsAuthErrorFr extends TranslationsAuthErrorEn {
 }
 
 // Path: profile.info
-class _TranslationsProfileInfoFr extends TranslationsProfileInfoEn {
-	_TranslationsProfileInfoFr._(TranslationsFr root) : this._root = root, super.internal(root);
+class _Translations$profile$info$fr extends Translations$profile$info$en {
+	_Translations$profile$info$fr._(TranslationsFr root) : this._root = root, super.internal(root);
 
 	final TranslationsFr _root; // ignore: unused_field
 
 	// Translations
 	@override String get title => 'Informations personnelles';
-	@override late final _TranslationsProfileInfoErrorFr error = _TranslationsProfileInfoErrorFr._(_root);
+	@override late final _Translations$profile$info$error$fr error = _Translations$profile$info$error$fr._(_root);
 }
 
 // Path: profile.changePassword
-class _TranslationsProfileChangePasswordFr extends TranslationsProfileChangePasswordEn {
-	_TranslationsProfileChangePasswordFr._(TranslationsFr root) : this._root = root, super.internal(root);
+class _Translations$profile$changePassword$fr extends Translations$profile$changePassword$en {
+	_Translations$profile$changePassword$fr._(TranslationsFr root) : this._root = root, super.internal(root);
 
 	final TranslationsFr _root; // ignore: unused_field
 
@@ -235,8 +235,8 @@ class _TranslationsProfileChangePasswordFr extends TranslationsProfileChangePass
 }
 
 // Path: settings.deleteAccount
-class _TranslationsSettingsDeleteAccountFr extends TranslationsSettingsDeleteAccountEn {
-	_TranslationsSettingsDeleteAccountFr._(TranslationsFr root) : this._root = root, super.internal(root);
+class _Translations$settings$deleteAccount$fr extends Translations$settings$deleteAccount$en {
+	_Translations$settings$deleteAccount$fr._(TranslationsFr root) : this._root = root, super.internal(root);
 
 	final TranslationsFr _root; // ignore: unused_field
 
@@ -246,8 +246,8 @@ class _TranslationsSettingsDeleteAccountFr extends TranslationsSettingsDeleteAcc
 }
 
 // Path: profile.info.error
-class _TranslationsProfileInfoErrorFr extends TranslationsProfileInfoErrorEn {
-	_TranslationsProfileInfoErrorFr._(TranslationsFr root) : this._root = root, super.internal(root);
+class _Translations$profile$info$error$fr extends Translations$profile$info$error$en {
+	_Translations$profile$info$error$fr._(TranslationsFr root) : this._root = root, super.internal(root);
 
 	final TranslationsFr _root; // ignore: unused_field
 

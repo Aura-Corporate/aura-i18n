@@ -44,37 +44,37 @@ class Translations with BaseTranslations<AppLocale, Translations> {
 	/// en: 'Aura'
 	String get aura => 'Aura';
 
-	late final TranslationsCommonEn common = TranslationsCommonEn.internal(_root);
-	late final TranslationsAuthEn auth = TranslationsAuthEn.internal(_root);
-	late final TranslationsProfileEn profile = TranslationsProfileEn.internal(_root);
-	late final TranslationsSettingsEn settings = TranslationsSettingsEn.internal(_root);
-	late final TranslationsMenuEn menu = TranslationsMenuEn.internal(_root);
-	late final TranslationsNetworkEn network = TranslationsNetworkEn.internal(_root);
+	late final Translations$common$en common = Translations$common$en.internal(_root);
+	late final Translations$auth$en auth = Translations$auth$en.internal(_root);
+	late final Translations$profile$en profile = Translations$profile$en.internal(_root);
+	late final Translations$settings$en settings = Translations$settings$en.internal(_root);
+	late final Translations$menu$en menu = Translations$menu$en.internal(_root);
+	late final Translations$network$en network = Translations$network$en.internal(_root);
 }
 
 // Path: common
-class TranslationsCommonEn {
-	TranslationsCommonEn.internal(this._root);
+class Translations$common$en {
+	Translations$common$en.internal(this._root);
 
 	final Translations _root; // ignore: unused_field
 
 	// Translations
-	late final TranslationsCommonFieldsEn fields = TranslationsCommonFieldsEn.internal(_root);
-	late final TranslationsCommonActionsEn actions = TranslationsCommonActionsEn.internal(_root);
-	late final TranslationsCommonDialogEn dialog = TranslationsCommonDialogEn.internal(_root);
+	late final Translations$common$fields$en fields = Translations$common$fields$en.internal(_root);
+	late final Translations$common$actions$en actions = Translations$common$actions$en.internal(_root);
+	late final Translations$common$dialog$en dialog = Translations$common$dialog$en.internal(_root);
 
 	/// en: 'Not implemented yet.'
 	String get notImplemented => 'Not implemented yet.';
 }
 
 // Path: auth
-class TranslationsAuthEn {
-	TranslationsAuthEn.internal(this._root);
+class Translations$auth$en {
+	Translations$auth$en.internal(this._root);
 
 	final Translations _root; // ignore: unused_field
 
 	// Translations
-	late final TranslationsAuthHeaderEn header = TranslationsAuthHeaderEn.internal(_root);
+	late final Translations$auth$header$en header = Translations$auth$header$en.internal(_root);
 
 	/// en: 'Forgot Password?'
 	String get forgotPassword => 'Forgot Password?';
@@ -85,24 +85,24 @@ class TranslationsAuthEn {
 	/// en: 'Sign Up'
 	String get register => 'Sign Up';
 
-	late final TranslationsAuthOauthEn oauth = TranslationsAuthOauthEn.internal(_root);
-	late final TranslationsAuthErrorEn error = TranslationsAuthErrorEn.internal(_root);
+	late final Translations$auth$oauth$en oauth = Translations$auth$oauth$en.internal(_root);
+	late final Translations$auth$error$en error = Translations$auth$error$en.internal(_root);
 }
 
 // Path: profile
-class TranslationsProfileEn {
-	TranslationsProfileEn.internal(this._root);
+class Translations$profile$en {
+	Translations$profile$en.internal(this._root);
 
 	final Translations _root; // ignore: unused_field
 
 	// Translations
-	late final TranslationsProfileInfoEn info = TranslationsProfileInfoEn.internal(_root);
-	late final TranslationsProfileChangePasswordEn changePassword = TranslationsProfileChangePasswordEn.internal(_root);
+	late final Translations$profile$info$en info = Translations$profile$info$en.internal(_root);
+	late final Translations$profile$changePassword$en changePassword = Translations$profile$changePassword$en.internal(_root);
 }
 
 // Path: settings
-class TranslationsSettingsEn {
-	TranslationsSettingsEn.internal(this._root);
+class Translations$settings$en {
+	Translations$settings$en.internal(this._root);
 
 	final Translations _root; // ignore: unused_field
 
@@ -123,15 +123,15 @@ class TranslationsSettingsEn {
 	/// en: 'Terms of Use'
 	String get termsOfUse => 'Terms of Use';
 
-	late final TranslationsSettingsDeleteAccountEn deleteAccount = TranslationsSettingsDeleteAccountEn.internal(_root);
+	late final Translations$settings$deleteAccount$en deleteAccount = Translations$settings$deleteAccount$en.internal(_root);
 
 	/// en: 'Disconnect'
 	String get disconnect => 'Disconnect';
 }
 
 // Path: menu
-class TranslationsMenuEn {
-	TranslationsMenuEn.internal(this._root);
+class Translations$menu$en {
+	Translations$menu$en.internal(this._root);
 
 	final Translations _root; // ignore: unused_field
 
@@ -148,8 +148,8 @@ class TranslationsMenuEn {
 }
 
 // Path: network
-class TranslationsNetworkEn {
-	TranslationsNetworkEn.internal(this._root);
+class Translations$network$en {
+	Translations$network$en.internal(this._root);
 
 	final Translations _root; // ignore: unused_field
 
@@ -178,8 +178,8 @@ class TranslationsNetworkEn {
 }
 
 // Path: common.fields
-class TranslationsCommonFieldsEn {
-	TranslationsCommonFieldsEn.internal(this._root);
+class Translations$common$fields$en {
+	Translations$common$fields$en.internal(this._root);
 
 	final Translations _root; // ignore: unused_field
 
@@ -205,8 +205,8 @@ class TranslationsCommonFieldsEn {
 }
 
 // Path: common.actions
-class TranslationsCommonActionsEn {
-	TranslationsCommonActionsEn.internal(this._root);
+class Translations$common$actions$en {
+	Translations$common$actions$en.internal(this._root);
 
 	final Translations _root; // ignore: unused_field
 
@@ -241,8 +241,8 @@ class TranslationsCommonActionsEn {
 }
 
 // Path: common.dialog
-class TranslationsCommonDialogEn {
-	TranslationsCommonDialogEn.internal(this._root);
+class Translations$common$dialog$en {
+	Translations$common$dialog$en.internal(this._root);
 
 	final Translations _root; // ignore: unused_field
 
@@ -253,8 +253,8 @@ class TranslationsCommonDialogEn {
 }
 
 // Path: auth.header
-class TranslationsAuthHeaderEn {
-	TranslationsAuthHeaderEn.internal(this._root);
+class Translations$auth$header$en {
+	Translations$auth$header$en.internal(this._root);
 
 	final Translations _root; // ignore: unused_field
 
@@ -268,8 +268,8 @@ class TranslationsAuthHeaderEn {
 }
 
 // Path: auth.oauth
-class TranslationsAuthOauthEn {
-	TranslationsAuthOauthEn.internal(this._root);
+class Translations$auth$oauth$en {
+	Translations$auth$oauth$en.internal(this._root);
 
 	final Translations _root; // ignore: unused_field
 
@@ -286,8 +286,8 @@ class TranslationsAuthOauthEn {
 }
 
 // Path: auth.error
-class TranslationsAuthErrorEn {
-	TranslationsAuthErrorEn.internal(this._root);
+class Translations$auth$error$en {
+	Translations$auth$error$en.internal(this._root);
 
 	final Translations _root; // ignore: unused_field
 
@@ -310,8 +310,8 @@ class TranslationsAuthErrorEn {
 }
 
 // Path: profile.info
-class TranslationsProfileInfoEn {
-	TranslationsProfileInfoEn.internal(this._root);
+class Translations$profile$info$en {
+	Translations$profile$info$en.internal(this._root);
 
 	final Translations _root; // ignore: unused_field
 
@@ -320,12 +320,12 @@ class TranslationsProfileInfoEn {
 	/// en: 'Personal information'
 	String get title => 'Personal information';
 
-	late final TranslationsProfileInfoErrorEn error = TranslationsProfileInfoErrorEn.internal(_root);
+	late final Translations$profile$info$error$en error = Translations$profile$info$error$en.internal(_root);
 }
 
 // Path: profile.changePassword
-class TranslationsProfileChangePasswordEn {
-	TranslationsProfileChangePasswordEn.internal(this._root);
+class Translations$profile$changePassword$en {
+	Translations$profile$changePassword$en.internal(this._root);
 
 	final Translations _root; // ignore: unused_field
 
@@ -342,8 +342,8 @@ class TranslationsProfileChangePasswordEn {
 }
 
 // Path: settings.deleteAccount
-class TranslationsSettingsDeleteAccountEn {
-	TranslationsSettingsDeleteAccountEn.internal(this._root);
+class Translations$settings$deleteAccount$en {
+	Translations$settings$deleteAccount$en.internal(this._root);
 
 	final Translations _root; // ignore: unused_field
 
@@ -357,8 +357,8 @@ class TranslationsSettingsDeleteAccountEn {
 }
 
 // Path: profile.info.error
-class TranslationsProfileInfoErrorEn {
-	TranslationsProfileInfoErrorEn.internal(this._root);
+class Translations$profile$info$error$en {
+	Translations$profile$info$error$en.internal(this._root);
 
 	final Translations _root; // ignore: unused_field
 
