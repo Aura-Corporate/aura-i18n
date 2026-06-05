@@ -8,3 +8,5 @@ string_interpolation: braces
 render_flat_map: false
 render_named_arguments: true
 translation_overrides: false
+timestamp: false
+

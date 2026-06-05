@@ -1,4 +1,7 @@
+// ignore_for_file: avoid_print
+
 import 'package:aura_i18n/aura_i18n.dart';
+
 
 void main() {
   // Use English (default)
