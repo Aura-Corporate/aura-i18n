@@ -19,31 +19,3 @@ jobs:
         with:
           token: ${{ secrets.RELEASE_PLEASE_TOKEN }}
           release-type: dart
-
-      - name: Checkout repository
-        if: ${{ steps.release.outputs.releases_created }}
-        uses: actions/checkout@v6
-
-      - name: Get Flutter version from .fvmrc
-        if: ${{ steps.release.outputs.releases_created }}
-        id: fvm-version
-        run: echo "version=$(jq -r .flutter .fvmrc)" >> "$GITHUB_OUTPUT"
-
-      - name: Set up Flutter
-        if: ${{ steps.release.outputs.releases_created }}
-        uses: subosito/flutter-action@v2
-        with:
-          flutter-version: ${{ steps.fvm-version.outputs.version }}
-          cache: true
-
-      - name: Install dependencies
-        if: ${{ steps.release.outputs.releases_created }}
-        run: flutter pub get
-
-      - name: Generate translations
-        if: ${{ steps.release.outputs.releases_created }}
-        run: dart run slang
-
-      - name: Publish to pub.dev
-        if: ${{ steps.release.outputs.releases_created }}
-        run: flutter pub publish --force
