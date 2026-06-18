@@ -65,6 +65,9 @@ class Translations$common$en {
 
 	/// en: 'Not implemented yet.'
 	String get notImplemented => 'Not implemented yet.';
+
+	/// en: 'Work in progress...'
+	String get workInProgress => 'Work in progress...';
 }
 
 // Path: auth
@@ -321,6 +324,7 @@ class Translations$profile$info$en {
 	String get title => 'Personal information';
 
 	late final Translations$profile$info$error$en error = Translations$profile$info$error$en.internal(_root);
+	late final Translations$profile$info$success$en success = Translations$profile$info$success$en.internal(_root);
 }
 
 // Path: profile.changePassword
@@ -374,6 +378,18 @@ class Translations$profile$info$error$en {
 	String get invalidPhoneNumber => 'Enter a valid phone number.';
 }
 
+// Path: profile.info.success
+class Translations$profile$info$success$en {
+	Translations$profile$info$success$en.internal(this._root);
+
+	final Translations _root; // ignore: unused_field
+
+	// Translations
+
+	/// en: 'Profile updated.'
+	String get profileUpdated => 'Profile updated.';
+}
+
 /// The flat map containing all translations for locale <en>.
 /// Only for edge cases! For simple maps, use the map function of this library.
 ///
@@ -400,6 +416,7 @@ extension on Translations {
 			'common.actions.ok' => 'OK',
 			'common.dialog.confirm' => 'Are you sure?',
 			'common.notImplemented' => 'Not implemented yet.',
+			'common.workInProgress' => 'Work in progress...',
 			'auth.header.welcome' => 'Welcome',
 			'auth.header.subtitle' => 'Create an account or log in to start',
 			'auth.forgotPassword' => 'Forgot Password?',
@@ -417,6 +434,7 @@ extension on Translations {
 			'profile.info.error.fieldRequired' => ({required Object field}) => '${field} is required.',
 			'profile.info.error.invalidEmail' => 'Enter a valid email address.',
 			'profile.info.error.invalidPhoneNumber' => 'Enter a valid phone number.',
+			'profile.info.success.profileUpdated' => 'Profile updated.',
 			'profile.changePassword.title' => 'Change Password',
 			'profile.changePassword.current' => 'Current Password',
 			'profile.changePassword.kNew' => 'New Password',

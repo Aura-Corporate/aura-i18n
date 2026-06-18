@@ -23,7 +23,8 @@
     "dialog": {
       "confirm": "Are you sure?"
     },
-    "notImplemented": "Not implemented yet."
+    "notImplemented": "Not implemented yet.",
+    "workInProgress": "Work in progress..."
   },
   "auth": {
     "header": {
@@ -53,6 +54,9 @@
         "fieldRequired": "{field} is required.",
         "invalidEmail": "Enter a valid email address.",
         "invalidPhoneNumber": "Enter a valid phone number."
+      },
+      "success": {
+        "profileUpdated": "Profile updated."
       }
     },
     "changePassword": {
