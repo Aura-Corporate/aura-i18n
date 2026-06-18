@@ -1,6 +1,6 @@
 name: aura_i18n
 description: "This package handles the internationalization for Aura applications."
-version: 1.0.0
+version: 1.1.0
 homepage: https://github.com/Aura-Corporate/aura-i18n
 repository: https://github.com/Aura-Corporate/aura-i18n
 
