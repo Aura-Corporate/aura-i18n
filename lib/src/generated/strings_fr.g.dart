@@ -59,6 +59,7 @@ class _Translations$common$fr extends Translations$common$en {
 	@override late final _Translations$common$actions$fr actions = _Translations$common$actions$fr._(_root);
 	@override late final _Translations$common$dialog$fr dialog = _Translations$common$dialog$fr._(_root);
 	@override String get notImplemented => 'Non implémenté pour le moment.';
+	@override String get workInProgress => 'Travail en cours...';
 }
 
 // Path: auth
@@ -220,6 +221,7 @@ class _Translations$profile$info$fr extends Translations$profile$info$en {
 	// Translations
 	@override String get title => 'Informations personnelles';
 	@override late final _Translations$profile$info$error$fr error = _Translations$profile$info$error$fr._(_root);
+	@override late final _Translations$profile$info$success$fr success = _Translations$profile$info$success$fr._(_root);
 }
 
 // Path: profile.changePassword
@@ -257,6 +259,16 @@ class _Translations$profile$info$error$fr extends Translations$profile$info$erro
 	@override String get invalidPhoneNumber => 'Veuillez saisir un numéro de téléphone valide.';
 }
 
+// Path: profile.info.success
+class _Translations$profile$info$success$fr extends Translations$profile$info$success$en {
+	_Translations$profile$info$success$fr._(TranslationsFr root) : this._root = root, super.internal(root);
+
+	final TranslationsFr _root; // ignore: unused_field
+
+	// Translations
+	@override String get profileUpdated => 'Profil mis à jour.';
+}
+
 /// The flat map containing all translations for locale <fr>.
 /// Only for edge cases! For simple maps, use the map function of this library.
 ///
@@ -283,6 +295,7 @@ extension on TranslationsFr {
 			'common.actions.ok' => 'OK',
 			'common.dialog.confirm' => 'Êtes-vous sûr ?',
 			'common.notImplemented' => 'Non implémenté pour le moment.',
+			'common.workInProgress' => 'Travail en cours...',
 			'auth.header.welcome' => 'Bienvenue',
 			'auth.header.subtitle' => 'Créez un compte ou connectez-vous pour commencer',
 			'auth.forgotPassword' => 'Mot de passe oublié ?',
@@ -300,6 +313,7 @@ extension on TranslationsFr {
 			'profile.info.error.fieldRequired' => ({required Object field}) => 'Le champ ${field} est obligatoire.',
 			'profile.info.error.invalidEmail' => 'Veuillez saisir une adresse e-mail valide.',
 			'profile.info.error.invalidPhoneNumber' => 'Veuillez saisir un numéro de téléphone valide.',
+			'profile.info.success.profileUpdated' => 'Profil mis à jour.',
 			'profile.changePassword.title' => 'Modifier le mot de passe',
 			'profile.changePassword.current' => 'Mot de passe actuel',
 			'profile.changePassword.kNew' => 'Nouveau mot de passe',
