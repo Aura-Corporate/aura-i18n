@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.2.0](https://github.com/Aura-Corporate/aura-i18n/compare/v1.1.0...v1.2.0) (2026-06-18)
+
+
+### Features
+
+* **i18n:** add profile update success translations ([085030c](https://github.com/Aura-Corporate/aura-i18n/commit/085030ce4250a8c4f364b0873d90452af48d41b1))
+
 ## [1.1.0](https://github.com/Aura-Corporate/aura-i18n/compare/v1.0.0...v1.1.0) (2026-06-18)
 
 
