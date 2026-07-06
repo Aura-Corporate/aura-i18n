@@ -77,6 +77,22 @@
     },
     "disconnect": "Disconnect"
   },
+  "relations": {
+    "title": "Your Relations",
+    "sentRequests": "Sent requests",
+    "receivedRequests": "Received requests",
+    "empty": {
+      "relations": "You have no relations yet.",
+      "sent": "No sent requests.",
+      "received": "No received requests."
+    },
+    "actions": {
+      "add": "Add",
+      "remove": "Remove",
+      "accept": "Accept",
+      "decline": "Decline"
+    }
+  },
   "menu": {
     "home": "Home",
     "profile": "Profile",

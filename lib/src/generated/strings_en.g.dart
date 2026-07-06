@@ -48,6 +48,7 @@ class Translations with BaseTranslations<AppLocale, Translations> {
 	late final Translations$auth$en auth = Translations$auth$en.internal(_root);
 	late final Translations$profile$en profile = Translations$profile$en.internal(_root);
 	late final Translations$settings$en settings = Translations$settings$en.internal(_root);
+	late final Translations$relations$en relations = Translations$relations$en.internal(_root);
 	late final Translations$menu$en menu = Translations$menu$en.internal(_root);
 	late final Translations$network$en network = Translations$network$en.internal(_root);
 }
@@ -130,6 +131,27 @@ class Translations$settings$en {
 
 	/// en: 'Disconnect'
 	String get disconnect => 'Disconnect';
+}
+
+// Path: relations
+class Translations$relations$en {
+	Translations$relations$en.internal(this._root);
+
+	final Translations _root; // ignore: unused_field
+
+	// Translations
+
+	/// en: 'Your Relations'
+	String get title => 'Your Relations';
+
+	/// en: 'Sent requests'
+	String get sentRequests => 'Sent requests';
+
+	/// en: 'Received requests'
+	String get receivedRequests => 'Received requests';
+
+	late final Translations$relations$empty$en empty = Translations$relations$empty$en.internal(_root);
+	late final Translations$relations$actions$en actions = Translations$relations$actions$en.internal(_root);
 }
 
 // Path: menu
@@ -360,6 +382,45 @@ class Translations$settings$deleteAccount$en {
 	String get warning => 'This action is irreversible. All your data will be permanently deleted.';
 }
 
+// Path: relations.empty
+class Translations$relations$empty$en {
+	Translations$relations$empty$en.internal(this._root);
+
+	final Translations _root; // ignore: unused_field
+
+	// Translations
+
+	/// en: 'You have no relations yet.'
+	String get relations => 'You have no relations yet.';
+
+	/// en: 'No sent requests.'
+	String get sent => 'No sent requests.';
+
+	/// en: 'No received requests.'
+	String get received => 'No received requests.';
+}
+
+// Path: relations.actions
+class Translations$relations$actions$en {
+	Translations$relations$actions$en.internal(this._root);
+
+	final Translations _root; // ignore: unused_field
+
+	// Translations
+
+	/// en: 'Add'
+	String get add => 'Add';
+
+	/// en: 'Remove'
+	String get remove => 'Remove';
+
+	/// en: 'Accept'
+	String get accept => 'Accept';
+
+	/// en: 'Decline'
+	String get decline => 'Decline';
+}
+
 // Path: profile.info.error
 class Translations$profile$info$error$en {
 	Translations$profile$info$error$en.internal(this._root);
@@ -446,6 +507,16 @@ extension on Translations {
 			'settings.deleteAccount.title' => 'Delete Account',
 			'settings.deleteAccount.warning' => 'This action is irreversible. All your data will be permanently deleted.',
 			'settings.disconnect' => 'Disconnect',
+			'relations.title' => 'Your Relations',
+			'relations.sentRequests' => 'Sent requests',
+			'relations.receivedRequests' => 'Received requests',
+			'relations.empty.relations' => 'You have no relations yet.',
+			'relations.empty.sent' => 'No sent requests.',
+			'relations.empty.received' => 'No received requests.',
+			'relations.actions.add' => 'Add',
+			'relations.actions.remove' => 'Remove',
+			'relations.actions.accept' => 'Accept',
+			'relations.actions.decline' => 'Decline',
 			'menu.home' => 'Home',
 			'menu.profile' => 'Profile',
 			'menu.relation' => 'Relations',
