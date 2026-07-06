@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.2.0](https://github.com/Aura-Corporate/aura-i18n/compare/v1.1.1...v1.2.0) (2026-07-06)
+
+
+### Features
+
+* **i18n:** add translations for relations management in English and French ([#8](https://github.com/Aura-Corporate/aura-i18n/issues/8)) ([cdb5697](https://github.com/Aura-Corporate/aura-i18n/commit/cdb5697151d20771113c6841d712ea97b1358e17))
+
 ## [1.1.1](https://github.com/Aura-Corporate/aura-i18n/compare/v1.1.0...v1.1.1) (2026-06-18)
 
 
