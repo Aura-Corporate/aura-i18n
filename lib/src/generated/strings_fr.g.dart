@@ -44,6 +44,7 @@ class TranslationsFr extends Translations with BaseTranslations<AppLocale, Trans
 	@override late final _Translations$auth$fr auth = _Translations$auth$fr._(_root);
 	@override late final _Translations$profile$fr profile = _Translations$profile$fr._(_root);
 	@override late final _Translations$settings$fr settings = _Translations$settings$fr._(_root);
+	@override late final _Translations$relations$fr relations = _Translations$relations$fr._(_root);
 	@override late final _Translations$menu$fr menu = _Translations$menu$fr._(_root);
 	@override late final _Translations$network$fr network = _Translations$network$fr._(_root);
 }
@@ -102,6 +103,20 @@ class _Translations$settings$fr extends Translations$settings$en {
 	@override String get termsOfUse => 'Conditions d\'utilisation';
 	@override late final _Translations$settings$deleteAccount$fr deleteAccount = _Translations$settings$deleteAccount$fr._(_root);
 	@override String get disconnect => 'Se déconnecter';
+}
+
+// Path: relations
+class _Translations$relations$fr extends Translations$relations$en {
+	_Translations$relations$fr._(TranslationsFr root) : this._root = root, super.internal(root);
+
+	final TranslationsFr _root; // ignore: unused_field
+
+	// Translations
+	@override String get title => 'Vos Relations';
+	@override String get sentRequests => 'Demandes envoyées';
+	@override String get receivedRequests => 'Demandes reçues';
+	@override late final _Translations$relations$empty$fr empty = _Translations$relations$empty$fr._(_root);
+	@override late final _Translations$relations$actions$fr actions = _Translations$relations$actions$fr._(_root);
 }
 
 // Path: menu
@@ -247,6 +262,31 @@ class _Translations$settings$deleteAccount$fr extends Translations$settings$dele
 	@override String get warning => 'Cette action est irréversible. Toutes vos données seront définitivement supprimées.';
 }
 
+// Path: relations.empty
+class _Translations$relations$empty$fr extends Translations$relations$empty$en {
+	_Translations$relations$empty$fr._(TranslationsFr root) : this._root = root, super.internal(root);
+
+	final TranslationsFr _root; // ignore: unused_field
+
+	// Translations
+	@override String get relations => 'Vous n\'avez aucune relation pour le moment.';
+	@override String get sent => 'Aucune demande envoyée.';
+	@override String get received => 'Aucune demande reçue.';
+}
+
+// Path: relations.actions
+class _Translations$relations$actions$fr extends Translations$relations$actions$en {
+	_Translations$relations$actions$fr._(TranslationsFr root) : this._root = root, super.internal(root);
+
+	final TranslationsFr _root; // ignore: unused_field
+
+	// Translations
+	@override String get add => 'Ajouter';
+	@override String get remove => 'Supprimer';
+	@override String get accept => 'Accepter';
+	@override String get decline => 'Refuser';
+}
+
 // Path: profile.info.error
 class _Translations$profile$info$error$fr extends Translations$profile$info$error$en {
 	_Translations$profile$info$error$fr._(TranslationsFr root) : this._root = root, super.internal(root);
@@ -325,6 +365,16 @@ extension on TranslationsFr {
 			'settings.deleteAccount.title' => 'Supprimer le compte',
 			'settings.deleteAccount.warning' => 'Cette action est irréversible. Toutes vos données seront définitivement supprimées.',
 			'settings.disconnect' => 'Se déconnecter',
+			'relations.title' => 'Vos Relations',
+			'relations.sentRequests' => 'Demandes envoyées',
+			'relations.receivedRequests' => 'Demandes reçues',
+			'relations.empty.relations' => 'Vous n\'avez aucune relation pour le moment.',
+			'relations.empty.sent' => 'Aucune demande envoyée.',
+			'relations.empty.received' => 'Aucune demande reçue.',
+			'relations.actions.add' => 'Ajouter',
+			'relations.actions.remove' => 'Supprimer',
+			'relations.actions.accept' => 'Accepter',
+			'relations.actions.decline' => 'Refuser',
 			'menu.home' => 'Accueil',
 			'menu.profile' => 'Profil',
 			'menu.relation' => 'Relations',
