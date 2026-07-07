@@ -24,7 +24,10 @@
       "confirm": "Are you sure?"
     },
     "notImplemented": "Not implemented yet.",
-    "workInProgress": "Work in progress..."
+    "workInProgress": "Work in progress...",
+    "feedback": {
+      "error": "Error: {error}"
+    }
   },
   "auth": {
     "header": {
@@ -37,14 +40,30 @@
     "oauth": {
       "divider": "Continue with",
       "apple": "Apple",
-      "google": "Google"
+      "google": "Google",
+      "error": {
+        "googleUnsupported": "Google sign-in is not supported on this platform.",
+        "googleMissingIdToken": "Google did not return an identity token.",
+        "appleUnavailable": "Apple sign-in is not available on this device.",
+        "appleMissingCredential": "Apple did not return sign-in credentials.",
+        "appleMissingConfig": "Missing Apple OAuth configuration: APPLE_SERVICE_ID and APPLE_REDIRECT_URI are required."
+      }
     },
     "error": {
       "invalidCredentials": "Invalid email or password.",
       "emailInUse": "This email is already in use.",
       "weakPassword": "Password must be at least 8 characters long.",
       "login": "Login failed.",
-      "register": "Registration failed."
+      "register": "Registration failed.",
+      "credentialsRequired": "Please enter your email and password.",
+      "requiredFields": "Please fill in all fields.",
+      "registrationRejected": "Registration was rejected.",
+      "oauth": "OAuth login failed.",
+      "oauthRejected": "OAuth login was rejected.",
+      "sessionCheck": "Session check failed.",
+      "sessionExpired": "Session expired. Please log in again.",
+      "invalidServerResponse": "Invalid server response.",
+      "invalidProfileResponse": "Invalid profile response."
     }
   },
   "profile": {
@@ -73,9 +92,12 @@
     "termsOfUse": "Terms of Use",
     "deleteAccount": {
       "title": "Delete Account",
-      "warning": "This action is irreversible. All your data will be permanently deleted."
+      "warning": "This action is irreversible. All your data will be permanently deleted.",
+      "success": "Account deleted",
+      "error": "Error during account deletion: {error}"
     },
-    "disconnect": "Disconnect"
+    "disconnect": "Disconnect",
+    "disconnecting": "Disconnecting..."
   },
   "relations": {
     "title": "Your Relations",
@@ -105,6 +127,18 @@
     "notFound": "The requested resource could not be found.",
     "serverError": "An unexpected server error occurred. Please try again later.",
     "unavailable": "The server is temporarily unavailable. Please try again later.",
-    "unknown": "A network error occurred. Please check your connection."
+    "unknown": "A network error occurred. Please check your connection.",
+    "unableToConnect": "Unable to connect to the server.",
+    "apiRouteNotFound": "API route not found.",
+    "unknownError": "Unknown error",
+    "backendConnection": "Error connecting to backend: {message}",
+    "unexpected": "Unexpected error: {error}"
+  },
+  "home": {
+    "environment": {
+      "development": "Development",
+      "production": "Production",
+      "message": "You are on {environment} environment.\n\n{message}"
+    }
   }
 }
