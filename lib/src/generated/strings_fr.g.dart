@@ -47,6 +47,7 @@ class TranslationsFr extends Translations with BaseTranslations<AppLocale, Trans
 	@override late final _Translations$relations$fr relations = _Translations$relations$fr._(_root);
 	@override late final _Translations$menu$fr menu = _Translations$menu$fr._(_root);
 	@override late final _Translations$network$fr network = _Translations$network$fr._(_root);
+	@override late final _Translations$home$fr home = _Translations$home$fr._(_root);
 }
 
 // Path: common
@@ -61,6 +62,7 @@ class _Translations$common$fr extends Translations$common$en {
 	@override late final _Translations$common$dialog$fr dialog = _Translations$common$dialog$fr._(_root);
 	@override String get notImplemented => 'Non implémenté pour le moment.';
 	@override String get workInProgress => 'Travail en cours...';
+	@override late final _Translations$common$feedback$fr feedback = _Translations$common$feedback$fr._(_root);
 }
 
 // Path: auth
@@ -103,6 +105,7 @@ class _Translations$settings$fr extends Translations$settings$en {
 	@override String get termsOfUse => 'Conditions d\'utilisation';
 	@override late final _Translations$settings$deleteAccount$fr deleteAccount = _Translations$settings$deleteAccount$fr._(_root);
 	@override String get disconnect => 'Se déconnecter';
+	@override String get disconnecting => 'Déconnexion...';
 }
 
 // Path: relations
@@ -145,6 +148,21 @@ class _Translations$network$fr extends Translations$network$en {
 	@override String get serverError => 'Une erreur serveur inattendue est survenue. Veuillez réessayer plus tard.';
 	@override String get unavailable => 'Le serveur est temporairement indisponible. Veuillez réessayer plus tard.';
 	@override String get unknown => 'Une erreur réseau est survenue. Veuillez vérifier votre connexion.';
+	@override String get unableToConnect => 'Impossible de se connecter au serveur.';
+	@override String get apiRouteNotFound => 'Route API introuvable.';
+	@override String get unknownError => 'Erreur inconnue';
+	@override String backendConnection({required Object message}) => 'Erreur de connexion au backend : ${message}';
+	@override String unexpected({required Object error}) => 'Erreur inattendue : ${error}';
+}
+
+// Path: home
+class _Translations$home$fr extends Translations$home$en {
+	_Translations$home$fr._(TranslationsFr root) : this._root = root, super.internal(root);
+
+	final TranslationsFr _root; // ignore: unused_field
+
+	// Translations
+	@override late final _Translations$home$environment$fr environment = _Translations$home$environment$fr._(_root);
 }
 
 // Path: common.fields
@@ -190,6 +208,16 @@ class _Translations$common$dialog$fr extends Translations$common$dialog$en {
 	@override String get confirm => 'Êtes-vous sûr ?';
 }
 
+// Path: common.feedback
+class _Translations$common$feedback$fr extends Translations$common$feedback$en {
+	_Translations$common$feedback$fr._(TranslationsFr root) : this._root = root, super.internal(root);
+
+	final TranslationsFr _root; // ignore: unused_field
+
+	// Translations
+	@override String error({required Object error}) => 'Erreur : ${error}';
+}
+
 // Path: auth.header
 class _Translations$auth$header$fr extends Translations$auth$header$en {
 	_Translations$auth$header$fr._(TranslationsFr root) : this._root = root, super.internal(root);
@@ -211,6 +239,7 @@ class _Translations$auth$oauth$fr extends Translations$auth$oauth$en {
 	@override String get divider => 'Continuer avec';
 	@override String get apple => 'Apple';
 	@override String get google => 'Google';
+	@override late final _Translations$auth$oauth$error$fr error = _Translations$auth$oauth$error$fr._(_root);
 }
 
 // Path: auth.error
@@ -225,6 +254,15 @@ class _Translations$auth$error$fr extends Translations$auth$error$en {
 	@override String get weakPassword => 'Le mot de passe doit contenir au moins 8 caractères.';
 	@override String get login => 'Échec de la connexion.';
 	@override String get register => 'Échec de l\'inscription.';
+	@override String get credentialsRequired => 'Veuillez saisir votre e-mail et votre mot de passe.';
+	@override String get requiredFields => 'Veuillez remplir tous les champs.';
+	@override String get registrationRejected => 'L\'inscription a été rejetée.';
+	@override String get oauth => 'Échec de la connexion OAuth.';
+	@override String get oauthRejected => 'La connexion OAuth a été rejetée.';
+	@override String get sessionCheck => 'Échec de la vérification de session.';
+	@override String get sessionExpired => 'Session expirée. Veuillez vous reconnecter.';
+	@override String get invalidServerResponse => 'Réponse serveur invalide.';
+	@override String get invalidProfileResponse => 'Réponse profil invalide.';
 }
 
 // Path: profile.info
@@ -260,6 +298,8 @@ class _Translations$settings$deleteAccount$fr extends Translations$settings$dele
 	// Translations
 	@override String get title => 'Supprimer le compte';
 	@override String get warning => 'Cette action est irréversible. Toutes vos données seront définitivement supprimées.';
+	@override String get success => 'Compte supprimé';
+	@override String error({required Object error}) => 'Erreur lors de la suppression du compte : ${error}';
 }
 
 // Path: relations.empty
@@ -285,6 +325,32 @@ class _Translations$relations$actions$fr extends Translations$relations$actions$
 	@override String get remove => 'Supprimer';
 	@override String get accept => 'Accepter';
 	@override String get decline => 'Refuser';
+}
+
+// Path: home.environment
+class _Translations$home$environment$fr extends Translations$home$environment$en {
+	_Translations$home$environment$fr._(TranslationsFr root) : this._root = root, super.internal(root);
+
+	final TranslationsFr _root; // ignore: unused_field
+
+	// Translations
+	@override String get development => 'Développement';
+	@override String get production => 'Production';
+	@override String message({required Object environment, required Object message}) => 'Vous êtes sur l\'environnement ${environment}.\n\n${message}';
+}
+
+// Path: auth.oauth.error
+class _Translations$auth$oauth$error$fr extends Translations$auth$oauth$error$en {
+	_Translations$auth$oauth$error$fr._(TranslationsFr root) : this._root = root, super.internal(root);
+
+	final TranslationsFr _root; // ignore: unused_field
+
+	// Translations
+	@override String get googleUnsupported => 'La connexion Google n\'est pas prise en charge sur cette plateforme.';
+	@override String get googleMissingIdToken => 'Google n\'a pas renvoyé de jeton d\'identité.';
+	@override String get appleUnavailable => 'La connexion Apple n\'est pas disponible sur cet appareil.';
+	@override String get appleMissingCredential => 'Apple n\'a pas renvoyé d\'identifiants de connexion.';
+	@override String get appleMissingConfig => 'Configuration OAuth Apple manquante : APPLE_SERVICE_ID et APPLE_REDIRECT_URI sont requis.';
 }
 
 // Path: profile.info.error
@@ -336,6 +402,7 @@ extension on TranslationsFr {
 			'common.dialog.confirm' => 'Êtes-vous sûr ?',
 			'common.notImplemented' => 'Non implémenté pour le moment.',
 			'common.workInProgress' => 'Travail en cours...',
+			'common.feedback.error' => ({required Object error}) => 'Erreur : ${error}',
 			'auth.header.welcome' => 'Bienvenue',
 			'auth.header.subtitle' => 'Créez un compte ou connectez-vous pour commencer',
 			'auth.forgotPassword' => 'Mot de passe oublié ?',
@@ -344,11 +411,25 @@ extension on TranslationsFr {
 			'auth.oauth.divider' => 'Continuer avec',
 			'auth.oauth.apple' => 'Apple',
 			'auth.oauth.google' => 'Google',
+			'auth.oauth.error.googleUnsupported' => 'La connexion Google n\'est pas prise en charge sur cette plateforme.',
+			'auth.oauth.error.googleMissingIdToken' => 'Google n\'a pas renvoyé de jeton d\'identité.',
+			'auth.oauth.error.appleUnavailable' => 'La connexion Apple n\'est pas disponible sur cet appareil.',
+			'auth.oauth.error.appleMissingCredential' => 'Apple n\'a pas renvoyé d\'identifiants de connexion.',
+			'auth.oauth.error.appleMissingConfig' => 'Configuration OAuth Apple manquante : APPLE_SERVICE_ID et APPLE_REDIRECT_URI sont requis.',
 			'auth.error.invalidCredentials' => 'E-mail ou mot de passe invalide.',
 			'auth.error.emailInUse' => 'Cet e-mail est déjà utilisé.',
 			'auth.error.weakPassword' => 'Le mot de passe doit contenir au moins 8 caractères.',
 			'auth.error.login' => 'Échec de la connexion.',
 			'auth.error.register' => 'Échec de l\'inscription.',
+			'auth.error.credentialsRequired' => 'Veuillez saisir votre e-mail et votre mot de passe.',
+			'auth.error.requiredFields' => 'Veuillez remplir tous les champs.',
+			'auth.error.registrationRejected' => 'L\'inscription a été rejetée.',
+			'auth.error.oauth' => 'Échec de la connexion OAuth.',
+			'auth.error.oauthRejected' => 'La connexion OAuth a été rejetée.',
+			'auth.error.sessionCheck' => 'Échec de la vérification de session.',
+			'auth.error.sessionExpired' => 'Session expirée. Veuillez vous reconnecter.',
+			'auth.error.invalidServerResponse' => 'Réponse serveur invalide.',
+			'auth.error.invalidProfileResponse' => 'Réponse profil invalide.',
 			'profile.info.title' => 'Informations personnelles',
 			'profile.info.error.fieldRequired' => ({required Object field}) => 'Le champ ${field} est obligatoire.',
 			'profile.info.error.invalidEmail' => 'Veuillez saisir une adresse e-mail valide.',
@@ -364,7 +445,10 @@ extension on TranslationsFr {
 			'settings.termsOfUse' => 'Conditions d\'utilisation',
 			'settings.deleteAccount.title' => 'Supprimer le compte',
 			'settings.deleteAccount.warning' => 'Cette action est irréversible. Toutes vos données seront définitivement supprimées.',
+			'settings.deleteAccount.success' => 'Compte supprimé',
+			'settings.deleteAccount.error' => ({required Object error}) => 'Erreur lors de la suppression du compte : ${error}',
 			'settings.disconnect' => 'Se déconnecter',
+			'settings.disconnecting' => 'Déconnexion...',
 			'relations.title' => 'Vos Relations',
 			'relations.sentRequests' => 'Demandes envoyées',
 			'relations.receivedRequests' => 'Demandes reçues',
@@ -385,6 +469,14 @@ extension on TranslationsFr {
 			'network.serverError' => 'Une erreur serveur inattendue est survenue. Veuillez réessayer plus tard.',
 			'network.unavailable' => 'Le serveur est temporairement indisponible. Veuillez réessayer plus tard.',
 			'network.unknown' => 'Une erreur réseau est survenue. Veuillez vérifier votre connexion.',
+			'network.unableToConnect' => 'Impossible de se connecter au serveur.',
+			'network.apiRouteNotFound' => 'Route API introuvable.',
+			'network.unknownError' => 'Erreur inconnue',
+			'network.backendConnection' => ({required Object message}) => 'Erreur de connexion au backend : ${message}',
+			'network.unexpected' => ({required Object error}) => 'Erreur inattendue : ${error}',
+			'home.environment.development' => 'Développement',
+			'home.environment.production' => 'Production',
+			'home.environment.message' => ({required Object environment, required Object message}) => 'Vous êtes sur l\'environnement ${environment}.\n\n${message}',
 			_ => null,
 		};
 	}

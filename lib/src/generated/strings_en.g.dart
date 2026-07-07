@@ -51,6 +51,7 @@ class Translations with BaseTranslations<AppLocale, Translations> {
 	late final Translations$relations$en relations = Translations$relations$en.internal(_root);
 	late final Translations$menu$en menu = Translations$menu$en.internal(_root);
 	late final Translations$network$en network = Translations$network$en.internal(_root);
+	late final Translations$home$en home = Translations$home$en.internal(_root);
 }
 
 // Path: common
@@ -69,6 +70,8 @@ class Translations$common$en {
 
 	/// en: 'Work in progress...'
 	String get workInProgress => 'Work in progress...';
+
+	late final Translations$common$feedback$en feedback = Translations$common$feedback$en.internal(_root);
 }
 
 // Path: auth
@@ -131,6 +134,9 @@ class Translations$settings$en {
 
 	/// en: 'Disconnect'
 	String get disconnect => 'Disconnect';
+
+	/// en: 'Disconnecting...'
+	String get disconnecting => 'Disconnecting...';
 }
 
 // Path: relations
@@ -200,6 +206,31 @@ class Translations$network$en {
 
 	/// en: 'A network error occurred. Please check your connection.'
 	String get unknown => 'A network error occurred. Please check your connection.';
+
+	/// en: 'Unable to connect to the server.'
+	String get unableToConnect => 'Unable to connect to the server.';
+
+	/// en: 'API route not found.'
+	String get apiRouteNotFound => 'API route not found.';
+
+	/// en: 'Unknown error'
+	String get unknownError => 'Unknown error';
+
+	/// en: 'Error connecting to backend: {message}'
+	String backendConnection({required Object message}) => 'Error connecting to backend: ${message}';
+
+	/// en: 'Unexpected error: {error}'
+	String unexpected({required Object error}) => 'Unexpected error: ${error}';
+}
+
+// Path: home
+class Translations$home$en {
+	Translations$home$en.internal(this._root);
+
+	final Translations _root; // ignore: unused_field
+
+	// Translations
+	late final Translations$home$environment$en environment = Translations$home$environment$en.internal(_root);
 }
 
 // Path: common.fields
@@ -277,6 +308,18 @@ class Translations$common$dialog$en {
 	String get confirm => 'Are you sure?';
 }
 
+// Path: common.feedback
+class Translations$common$feedback$en {
+	Translations$common$feedback$en.internal(this._root);
+
+	final Translations _root; // ignore: unused_field
+
+	// Translations
+
+	/// en: 'Error: {error}'
+	String error({required Object error}) => 'Error: ${error}';
+}
+
 // Path: auth.header
 class Translations$auth$header$en {
 	Translations$auth$header$en.internal(this._root);
@@ -308,6 +351,8 @@ class Translations$auth$oauth$en {
 
 	/// en: 'Google'
 	String get google => 'Google';
+
+	late final Translations$auth$oauth$error$en error = Translations$auth$oauth$error$en.internal(_root);
 }
 
 // Path: auth.error
@@ -332,6 +377,33 @@ class Translations$auth$error$en {
 
 	/// en: 'Registration failed.'
 	String get register => 'Registration failed.';
+
+	/// en: 'Please enter your email and password.'
+	String get credentialsRequired => 'Please enter your email and password.';
+
+	/// en: 'Please fill in all fields.'
+	String get requiredFields => 'Please fill in all fields.';
+
+	/// en: 'Registration was rejected.'
+	String get registrationRejected => 'Registration was rejected.';
+
+	/// en: 'OAuth login failed.'
+	String get oauth => 'OAuth login failed.';
+
+	/// en: 'OAuth login was rejected.'
+	String get oauthRejected => 'OAuth login was rejected.';
+
+	/// en: 'Session check failed.'
+	String get sessionCheck => 'Session check failed.';
+
+	/// en: 'Session expired. Please log in again.'
+	String get sessionExpired => 'Session expired. Please log in again.';
+
+	/// en: 'Invalid server response.'
+	String get invalidServerResponse => 'Invalid server response.';
+
+	/// en: 'Invalid profile response.'
+	String get invalidProfileResponse => 'Invalid profile response.';
 }
 
 // Path: profile.info
@@ -380,6 +452,12 @@ class Translations$settings$deleteAccount$en {
 
 	/// en: 'This action is irreversible. All your data will be permanently deleted.'
 	String get warning => 'This action is irreversible. All your data will be permanently deleted.';
+
+	/// en: 'Account deleted'
+	String get success => 'Account deleted';
+
+	/// en: 'Error during account deletion: {error}'
+	String error({required Object error}) => 'Error during account deletion: ${error}';
 }
 
 // Path: relations.empty
@@ -419,6 +497,48 @@ class Translations$relations$actions$en {
 
 	/// en: 'Decline'
 	String get decline => 'Decline';
+}
+
+// Path: home.environment
+class Translations$home$environment$en {
+	Translations$home$environment$en.internal(this._root);
+
+	final Translations _root; // ignore: unused_field
+
+	// Translations
+
+	/// en: 'Development'
+	String get development => 'Development';
+
+	/// en: 'Production'
+	String get production => 'Production';
+
+	/// en: 'You are on {environment} environment. {message}'
+	String message({required Object environment, required Object message}) => 'You are on ${environment} environment.\n\n${message}';
+}
+
+// Path: auth.oauth.error
+class Translations$auth$oauth$error$en {
+	Translations$auth$oauth$error$en.internal(this._root);
+
+	final Translations _root; // ignore: unused_field
+
+	// Translations
+
+	/// en: 'Google sign-in is not supported on this platform.'
+	String get googleUnsupported => 'Google sign-in is not supported on this platform.';
+
+	/// en: 'Google did not return an identity token.'
+	String get googleMissingIdToken => 'Google did not return an identity token.';
+
+	/// en: 'Apple sign-in is not available on this device.'
+	String get appleUnavailable => 'Apple sign-in is not available on this device.';
+
+	/// en: 'Apple did not return sign-in credentials.'
+	String get appleMissingCredential => 'Apple did not return sign-in credentials.';
+
+	/// en: 'Missing Apple OAuth configuration: APPLE_SERVICE_ID and APPLE_REDIRECT_URI are required.'
+	String get appleMissingConfig => 'Missing Apple OAuth configuration: APPLE_SERVICE_ID and APPLE_REDIRECT_URI are required.';
 }
 
 // Path: profile.info.error
@@ -478,6 +598,7 @@ extension on Translations {
 			'common.dialog.confirm' => 'Are you sure?',
 			'common.notImplemented' => 'Not implemented yet.',
 			'common.workInProgress' => 'Work in progress...',
+			'common.feedback.error' => ({required Object error}) => 'Error: ${error}',
 			'auth.header.welcome' => 'Welcome',
 			'auth.header.subtitle' => 'Create an account or log in to start',
 			'auth.forgotPassword' => 'Forgot Password?',
@@ -486,11 +607,25 @@ extension on Translations {
 			'auth.oauth.divider' => 'Continue with',
 			'auth.oauth.apple' => 'Apple',
 			'auth.oauth.google' => 'Google',
+			'auth.oauth.error.googleUnsupported' => 'Google sign-in is not supported on this platform.',
+			'auth.oauth.error.googleMissingIdToken' => 'Google did not return an identity token.',
+			'auth.oauth.error.appleUnavailable' => 'Apple sign-in is not available on this device.',
+			'auth.oauth.error.appleMissingCredential' => 'Apple did not return sign-in credentials.',
+			'auth.oauth.error.appleMissingConfig' => 'Missing Apple OAuth configuration: APPLE_SERVICE_ID and APPLE_REDIRECT_URI are required.',
 			'auth.error.invalidCredentials' => 'Invalid email or password.',
 			'auth.error.emailInUse' => 'This email is already in use.',
 			'auth.error.weakPassword' => 'Password must be at least 8 characters long.',
 			'auth.error.login' => 'Login failed.',
 			'auth.error.register' => 'Registration failed.',
+			'auth.error.credentialsRequired' => 'Please enter your email and password.',
+			'auth.error.requiredFields' => 'Please fill in all fields.',
+			'auth.error.registrationRejected' => 'Registration was rejected.',
+			'auth.error.oauth' => 'OAuth login failed.',
+			'auth.error.oauthRejected' => 'OAuth login was rejected.',
+			'auth.error.sessionCheck' => 'Session check failed.',
+			'auth.error.sessionExpired' => 'Session expired. Please log in again.',
+			'auth.error.invalidServerResponse' => 'Invalid server response.',
+			'auth.error.invalidProfileResponse' => 'Invalid profile response.',
 			'profile.info.title' => 'Personal information',
 			'profile.info.error.fieldRequired' => ({required Object field}) => '${field} is required.',
 			'profile.info.error.invalidEmail' => 'Enter a valid email address.',
@@ -506,7 +641,10 @@ extension on Translations {
 			'settings.termsOfUse' => 'Terms of Use',
 			'settings.deleteAccount.title' => 'Delete Account',
 			'settings.deleteAccount.warning' => 'This action is irreversible. All your data will be permanently deleted.',
+			'settings.deleteAccount.success' => 'Account deleted',
+			'settings.deleteAccount.error' => ({required Object error}) => 'Error during account deletion: ${error}',
 			'settings.disconnect' => 'Disconnect',
+			'settings.disconnecting' => 'Disconnecting...',
 			'relations.title' => 'Your Relations',
 			'relations.sentRequests' => 'Sent requests',
 			'relations.receivedRequests' => 'Received requests',
@@ -527,6 +665,14 @@ extension on Translations {
 			'network.serverError' => 'An unexpected server error occurred. Please try again later.',
 			'network.unavailable' => 'The server is temporarily unavailable. Please try again later.',
 			'network.unknown' => 'A network error occurred. Please check your connection.',
+			'network.unableToConnect' => 'Unable to connect to the server.',
+			'network.apiRouteNotFound' => 'API route not found.',
+			'network.unknownError' => 'Unknown error',
+			'network.backendConnection' => ({required Object message}) => 'Error connecting to backend: ${message}',
+			'network.unexpected' => ({required Object error}) => 'Unexpected error: ${error}',
+			'home.environment.development' => 'Development',
+			'home.environment.production' => 'Production',
+			'home.environment.message' => ({required Object environment, required Object message}) => 'You are on ${environment} environment.\n\n${message}',
 			_ => null,
 		};
 	}
