@@ -137,6 +137,7 @@
   "home": {
     "environment": {
       "development": "Development",
+      "local": "Local Development",
       "production": "Production",
       "message": "You are on {environment} environment.\n\n{message}"
     }

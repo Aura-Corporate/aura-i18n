@@ -335,8 +335,9 @@ class _Translations$home$environment$fr extends Translations$home$environment$en
 
 	// Translations
 	@override String get development => 'Développement';
+	@override String get local => 'Développement local';
 	@override String get production => 'Production';
-	@override String message({required Object environment, required Object message}) => 'Vous êtes sur l\'environnement ${environment}.\n\n${message}';
+	@override String message({required Object environment, required Object message}) => 'Vous êtes sur l\'environnement de ${environment}.\n\n${message}';
 }
 
 // Path: auth.oauth.error
@@ -475,8 +476,9 @@ extension on TranslationsFr {
 			'network.backendConnection' => ({required Object message}) => 'Erreur de connexion au backend : ${message}',
 			'network.unexpected' => ({required Object error}) => 'Erreur inattendue : ${error}',
 			'home.environment.development' => 'Développement',
+			'home.environment.local' => 'Développement local',
 			'home.environment.production' => 'Production',
-			'home.environment.message' => ({required Object environment, required Object message}) => 'Vous êtes sur l\'environnement ${environment}.\n\n${message}',
+			'home.environment.message' => ({required Object environment, required Object message}) => 'Vous êtes sur l\'environnement de ${environment}.\n\n${message}',
 			_ => null,
 		};
 	}
