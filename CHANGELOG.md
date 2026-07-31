@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.4.0](https://github.com/Aura-Corporate/aura-i18n/compare/v1.3.0...v1.4.0) (2026-07-31)
+
+
+### Features
+
+* **i18n:** add local development environment translations in French and English ([#12](https://github.com/Aura-Corporate/aura-i18n/issues/12)) ([10ee7c1](https://github.com/Aura-Corporate/aura-i18n/commit/10ee7c1c148182350f398f8a9ecd76d7b0dcd136))
+
 ## [1.3.0](https://github.com/Aura-Corporate/aura-i18n/compare/v1.2.0...v1.3.0) (2026-07-07)
 
 
