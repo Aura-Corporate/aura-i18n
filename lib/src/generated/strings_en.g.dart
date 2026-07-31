@@ -510,6 +510,9 @@ class Translations$home$environment$en {
 	/// en: 'Development'
 	String get development => 'Development';
 
+	/// en: 'Local Development'
+	String get local => 'Local Development';
+
 	/// en: 'Production'
 	String get production => 'Production';
 
@@ -671,6 +674,7 @@ extension on Translations {
 			'network.backendConnection' => ({required Object message}) => 'Error connecting to backend: ${message}',
 			'network.unexpected' => ({required Object error}) => 'Unexpected error: ${error}',
 			'home.environment.development' => 'Development',
+			'home.environment.local' => 'Local Development',
 			'home.environment.production' => 'Production',
 			'home.environment.message' => ({required Object environment, required Object message}) => 'You are on ${environment} environment.\n\n${message}',
 			_ => null,

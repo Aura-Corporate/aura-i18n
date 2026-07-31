@@ -137,8 +137,9 @@
   "home": {
     "environment": {
       "development": "Développement",
+      "local": "Développement local",
       "production": "Production",
-      "message": "Vous êtes sur l'environnement {environment}.\n\n{message}"
+      "message": "Vous êtes sur l'environnement de {environment}.\n\n{message}"
     }
   }
 }
