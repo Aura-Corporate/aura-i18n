@@ -101,8 +101,18 @@
   },
   "relations": {
     "title": "Vos Relations",
+    "tabs": {
+      "relations": "Relations",
+      "requests": "Demandes"
+    },
     "sentRequests": "Demandes envoyées",
     "receivedRequests": "Demandes reçues",
+    "pendingRequests": "Demandes en attente",
+    "sentAt": {
+      "today": "Envoyée aujourd'hui",
+      "yesterday": "Envoyée hier",
+      "daysAgo": "Envoyée il y a {days} jours"
+    },
     "empty": {
       "relations": "Vous n'avez aucune relation pour le moment.",
       "sent": "Aucune demande envoyée.",
@@ -113,6 +123,18 @@
       "remove": "Supprimer",
       "accept": "Accepter",
       "decline": "Refuser"
+    },
+    "search": {
+      "hint": "Rechercher",
+      "noResults": "Aucun résultat pour « {query} »"
+    },
+    "suggestions": {
+      "title": "Suggestions de relations",
+      "mutualFriends": {
+        "one": "{n} ami en commun",
+        "other": "{n} amis en commun"
+      },
+      "requestSent": "Demande d'ami envoyée"
     }
   },
   "menu": {

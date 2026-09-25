@@ -116,10 +116,15 @@ class _Translations$relations$fr extends Translations$relations$en {
 
 	// Translations
 	@override String get title => 'Vos Relations';
+	@override late final _Translations$relations$tabs$fr tabs = _Translations$relations$tabs$fr._(_root);
 	@override String get sentRequests => 'Demandes envoyées';
 	@override String get receivedRequests => 'Demandes reçues';
+	@override String get pendingRequests => 'Demandes en attente';
+	@override late final _Translations$relations$sentAt$fr sentAt = _Translations$relations$sentAt$fr._(_root);
 	@override late final _Translations$relations$empty$fr empty = _Translations$relations$empty$fr._(_root);
 	@override late final _Translations$relations$actions$fr actions = _Translations$relations$actions$fr._(_root);
+	@override late final _Translations$relations$search$fr search = _Translations$relations$search$fr._(_root);
+	@override late final _Translations$relations$suggestions$fr suggestions = _Translations$relations$suggestions$fr._(_root);
 }
 
 // Path: menu
@@ -302,6 +307,29 @@ class _Translations$settings$deleteAccount$fr extends Translations$settings$dele
 	@override String error({required Object error}) => 'Erreur lors de la suppression du compte : ${error}';
 }
 
+// Path: relations.tabs
+class _Translations$relations$tabs$fr extends Translations$relations$tabs$en {
+	_Translations$relations$tabs$fr._(TranslationsFr root) : this._root = root, super.internal(root);
+
+	final TranslationsFr _root; // ignore: unused_field
+
+	// Translations
+	@override String get relations => 'Relations';
+	@override String get requests => 'Demandes';
+}
+
+// Path: relations.sentAt
+class _Translations$relations$sentAt$fr extends Translations$relations$sentAt$en {
+	_Translations$relations$sentAt$fr._(TranslationsFr root) : this._root = root, super.internal(root);
+
+	final TranslationsFr _root; // ignore: unused_field
+
+	// Translations
+	@override String get today => 'Envoyée aujourd\'hui';
+	@override String get yesterday => 'Envoyée hier';
+	@override String daysAgo({required Object days}) => 'Envoyée il y a ${days} jours';
+}
+
 // Path: relations.empty
 class _Translations$relations$empty$fr extends Translations$relations$empty$en {
 	_Translations$relations$empty$fr._(TranslationsFr root) : this._root = root, super.internal(root);
@@ -325,6 +353,32 @@ class _Translations$relations$actions$fr extends Translations$relations$actions$
 	@override String get remove => 'Supprimer';
 	@override String get accept => 'Accepter';
 	@override String get decline => 'Refuser';
+}
+
+// Path: relations.search
+class _Translations$relations$search$fr extends Translations$relations$search$en {
+	_Translations$relations$search$fr._(TranslationsFr root) : this._root = root, super.internal(root);
+
+	final TranslationsFr _root; // ignore: unused_field
+
+	// Translations
+	@override String get hint => 'Rechercher';
+	@override String noResults({required Object query}) => 'Aucun résultat pour « ${query} »';
+}
+
+// Path: relations.suggestions
+class _Translations$relations$suggestions$fr extends Translations$relations$suggestions$en {
+	_Translations$relations$suggestions$fr._(TranslationsFr root) : this._root = root, super.internal(root);
+
+	final TranslationsFr _root; // ignore: unused_field
+
+	// Translations
+	@override String get title => 'Suggestions de relations';
+	@override String mutualFriends({required num n}) => (_root.$meta.cardinalResolver ?? PluralResolvers.cardinal('fr'))(n,
+		one: '${n} ami en commun',
+		other: '${n} amis en commun',
+	);
+	@override String get requestSent => 'Demande d\'ami envoyée';
 }
 
 // Path: home.environment
@@ -451,8 +505,14 @@ extension on TranslationsFr {
 			'settings.disconnect' => 'Se déconnecter',
 			'settings.disconnecting' => 'Déconnexion...',
 			'relations.title' => 'Vos Relations',
+			'relations.tabs.relations' => 'Relations',
+			'relations.tabs.requests' => 'Demandes',
 			'relations.sentRequests' => 'Demandes envoyées',
 			'relations.receivedRequests' => 'Demandes reçues',
+			'relations.pendingRequests' => 'Demandes en attente',
+			'relations.sentAt.today' => 'Envoyée aujourd\'hui',
+			'relations.sentAt.yesterday' => 'Envoyée hier',
+			'relations.sentAt.daysAgo' => ({required Object days}) => 'Envoyée il y a ${days} jours',
 			'relations.empty.relations' => 'Vous n\'avez aucune relation pour le moment.',
 			'relations.empty.sent' => 'Aucune demande envoyée.',
 			'relations.empty.received' => 'Aucune demande reçue.',
@@ -460,6 +520,11 @@ extension on TranslationsFr {
 			'relations.actions.remove' => 'Supprimer',
 			'relations.actions.accept' => 'Accepter',
 			'relations.actions.decline' => 'Refuser',
+			'relations.search.hint' => 'Rechercher',
+			'relations.search.noResults' => ({required Object query}) => 'Aucun résultat pour « ${query} »',
+			'relations.suggestions.title' => 'Suggestions de relations',
+			'relations.suggestions.mutualFriends' => ({required num n}) => (_root.$meta.cardinalResolver ?? PluralResolvers.cardinal('fr'))(n, one: '${n} ami en commun', other: '${n} amis en commun', ), 
+			'relations.suggestions.requestSent' => 'Demande d\'ami envoyée',
 			'menu.home' => 'Accueil',
 			'menu.profile' => 'Profil',
 			'menu.relation' => 'Relations',
