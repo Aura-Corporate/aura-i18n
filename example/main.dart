@@ -8,8 +8,7 @@ void main() {
   print('--- English ---');
   print('Title: ${t.aura}');
   print('Welcome: ${t.auth.header.welcome}');
-  print(
-      'Error message: ${t.profile.info.error.fieldRequired(field: t.common.fields.email)}');
+  print('Error message: ${t.profile.info.error.fieldRequired(field: t.common.fields.email)}');
 
   // Switch to French (synchronously)
   LocaleSettings.setLocale(AppLocale.fr);
@@ -17,6 +16,5 @@ void main() {
   print('\n--- French ---');
   print('Titre: ${t.aura}');
   print('Bienvenue: ${t.auth.header.welcome}');
-  print(
-      'Message d\'erreur: ${t.profile.info.error.fieldRequired(field: t.common.fields.email)}');
+  print('Message d\'erreur: ${t.profile.info.error.fieldRequired(field: t.common.fields.email)}');
 }
