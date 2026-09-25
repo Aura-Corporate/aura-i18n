@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.5.0](https://github.com/Aura-Corporate/aura-i18n/compare/v1.4.0...v1.5.0) (2026-09-25)
+
+
+### Features
+
+* **i18n:** enhance relations translations in English and French ([#15](https://github.com/Aura-Corporate/aura-i18n/issues/15)) ([ac4e9da](https://github.com/Aura-Corporate/aura-i18n/commit/ac4e9dac73e567ec8fde510a4404af30ab7c8f03))
+
 ## [1.4.0](https://github.com/Aura-Corporate/aura-i18n/compare/v1.3.0...v1.4.0) (2026-07-31)
 
 
