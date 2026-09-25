@@ -20,20 +20,21 @@ class Translations with BaseTranslations<AppLocale, Translations> {
 	/// Constructing via the enum [AppLocale.build] is preferred.
 	Translations({Map<String, Node>? overrides, PluralResolver? cardinalResolver, PluralResolver? ordinalResolver, TranslationMetadata<AppLocale, Translations>? meta})
 		: assert(overrides == null, 'Set "translation_overrides: true" in order to enable this feature.'),
-		  $meta = meta ?? TranslationMetadata(
+		  _meta = meta ?? TranslationMetadata(
 		    locale: AppLocale.en,
 		    overrides: overrides ?? {},
 		    cardinalResolver: cardinalResolver,
 		    ordinalResolver: ordinalResolver,
 		  ) {
-		$meta.setFlatMapFunction(_flatMapFunction);
+		_meta.setFlatMapFunction(_flatMapFunction);
 	}
 
 	/// Metadata for the translations of <en>.
-	@override final TranslationMetadata<AppLocale, Translations> $meta;
+	final TranslationMetadata<AppLocale, Translations> _meta;
+	@override TranslationMetadata<AppLocale, Translations> get $meta => _meta;
 
 	/// Access flat map
-	dynamic operator[](String key) => $meta.getTranslation(key);
+	dynamic operator[](String key) => _meta.getTranslation(key);
 
 	late final Translations _root = this; // ignore: unused_field
 
@@ -150,14 +151,22 @@ class Translations$relations$en {
 	/// en: 'Your Relations'
 	String get title => 'Your Relations';
 
+	late final Translations$relations$tabs$en tabs = Translations$relations$tabs$en.internal(_root);
+
 	/// en: 'Sent requests'
 	String get sentRequests => 'Sent requests';
 
 	/// en: 'Received requests'
 	String get receivedRequests => 'Received requests';
 
+	/// en: 'Pending requests'
+	String get pendingRequests => 'Pending requests';
+
+	late final Translations$relations$sentAt$en sentAt = Translations$relations$sentAt$en.internal(_root);
 	late final Translations$relations$empty$en empty = Translations$relations$empty$en.internal(_root);
 	late final Translations$relations$actions$en actions = Translations$relations$actions$en.internal(_root);
+	late final Translations$relations$search$en search = Translations$relations$search$en.internal(_root);
+	late final Translations$relations$suggestions$en suggestions = Translations$relations$suggestions$en.internal(_root);
 }
 
 // Path: menu
@@ -460,6 +469,39 @@ class Translations$settings$deleteAccount$en {
 	String error({required Object error}) => 'Error during account deletion: ${error}';
 }
 
+// Path: relations.tabs
+class Translations$relations$tabs$en {
+	Translations$relations$tabs$en.internal(this._root);
+
+	final Translations _root; // ignore: unused_field
+
+	// Translations
+
+	/// en: 'Relations'
+	String get relations => 'Relations';
+
+	/// en: 'Requests'
+	String get requests => 'Requests';
+}
+
+// Path: relations.sentAt
+class Translations$relations$sentAt$en {
+	Translations$relations$sentAt$en.internal(this._root);
+
+	final Translations _root; // ignore: unused_field
+
+	// Translations
+
+	/// en: 'Sent today'
+	String get today => 'Sent today';
+
+	/// en: 'Sent yesterday'
+	String get yesterday => 'Sent yesterday';
+
+	/// en: 'Sent {days} days ago'
+	String daysAgo({required Object days}) => 'Sent ${days} days ago';
+}
+
 // Path: relations.empty
 class Translations$relations$empty$en {
 	Translations$relations$empty$en.internal(this._root);
@@ -497,6 +539,42 @@ class Translations$relations$actions$en {
 
 	/// en: 'Decline'
 	String get decline => 'Decline';
+}
+
+// Path: relations.search
+class Translations$relations$search$en {
+	Translations$relations$search$en.internal(this._root);
+
+	final Translations _root; // ignore: unused_field
+
+	// Translations
+
+	/// en: 'Search'
+	String get hint => 'Search';
+
+	/// en: 'No results for "{query}"'
+	String noResults({required Object query}) => 'No results for "${query}"';
+}
+
+// Path: relations.suggestions
+class Translations$relations$suggestions$en {
+	Translations$relations$suggestions$en.internal(this._root);
+
+	final Translations _root; // ignore: unused_field
+
+	// Translations
+
+	/// en: 'Relationship suggestions'
+	String get title => 'Relationship suggestions';
+
+	/// en: '(one) {{n} mutual friend} (other) {{n} mutual friends}'
+	String mutualFriends({required num n}) => (_root.$meta.cardinalResolver ?? PluralResolvers.cardinal('en'))(n,
+		one: '${n} mutual friend',
+		other: '${n} mutual friends',
+	);
+
+	/// en: 'Friend request sent'
+	String get requestSent => 'Friend request sent';
 }
 
 // Path: home.environment
@@ -649,8 +727,14 @@ extension on Translations {
 			'settings.disconnect' => 'Disconnect',
 			'settings.disconnecting' => 'Disconnecting...',
 			'relations.title' => 'Your Relations',
+			'relations.tabs.relations' => 'Relations',
+			'relations.tabs.requests' => 'Requests',
 			'relations.sentRequests' => 'Sent requests',
 			'relations.receivedRequests' => 'Received requests',
+			'relations.pendingRequests' => 'Pending requests',
+			'relations.sentAt.today' => 'Sent today',
+			'relations.sentAt.yesterday' => 'Sent yesterday',
+			'relations.sentAt.daysAgo' => ({required Object days}) => 'Sent ${days} days ago',
 			'relations.empty.relations' => 'You have no relations yet.',
 			'relations.empty.sent' => 'No sent requests.',
 			'relations.empty.received' => 'No received requests.',
@@ -658,6 +742,11 @@ extension on Translations {
 			'relations.actions.remove' => 'Remove',
 			'relations.actions.accept' => 'Accept',
 			'relations.actions.decline' => 'Decline',
+			'relations.search.hint' => 'Search',
+			'relations.search.noResults' => ({required Object query}) => 'No results for "${query}"',
+			'relations.suggestions.title' => 'Relationship suggestions',
+			'relations.suggestions.mutualFriends' => ({required num n}) => (_root.$meta.cardinalResolver ?? PluralResolvers.cardinal('en'))(n, one: '${n} mutual friend', other: '${n} mutual friends', ), 
+			'relations.suggestions.requestSent' => 'Friend request sent',
 			'menu.home' => 'Home',
 			'menu.profile' => 'Profile',
 			'menu.relation' => 'Relations',

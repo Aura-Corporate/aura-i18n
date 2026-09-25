@@ -101,8 +101,18 @@
   },
   "relations": {
     "title": "Your Relations",
+    "tabs": {
+      "relations": "Relations",
+      "requests": "Requests"
+    },
     "sentRequests": "Sent requests",
     "receivedRequests": "Received requests",
+    "pendingRequests": "Pending requests",
+    "sentAt": {
+      "today": "Sent today",
+      "yesterday": "Sent yesterday",
+      "daysAgo": "Sent {days} days ago"
+    },
     "empty": {
       "relations": "You have no relations yet.",
       "sent": "No sent requests.",
@@ -113,6 +123,18 @@
       "remove": "Remove",
       "accept": "Accept",
       "decline": "Decline"
+    },
+    "search": {
+      "hint": "Search",
+      "noResults": "No results for \"{query}\""
+    },
+    "suggestions": {
+      "title": "Relationship suggestions",
+      "mutualFriends": {
+        "one": "{n} mutual friend",
+        "other": "{n} mutual friends"
+      },
+      "requestSent": "Friend request sent"
     }
   },
   "menu": {
