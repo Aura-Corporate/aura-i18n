@@ -7,7 +7,8 @@
       "password": "Password",
       "firstName": "First Name",
       "lastName": "Last Name",
-      "phoneNumber": "Phone Number"
+      "phoneNumber": "Phone Number",
+      "username": "Username"
     },
     "actions": {
       "edit": "Edit",
@@ -49,9 +50,20 @@
         "appleMissingConfig": "Missing Apple OAuth configuration: APPLE_SERVICE_ID and APPLE_REDIRECT_URI are required."
       }
     },
+    "username": {
+      "rules": "3 to 20 characters: lowercase letters, digits, dots or underscores.",
+      "available": "This username is available.",
+      "choose": {
+        "title": "Choose your username",
+        "subtitle": "Your username is unique. Others use it to find you and add you to their relations.",
+        "submit": "Continue"
+      }
+    },
     "error": {
       "invalidCredentials": "Invalid email or password.",
       "emailInUse": "This email is already in use.",
+      "usernameTaken": "This username is already taken.",
+      "invalidUsername": "Username must be 3 to 20 characters: lowercase letters, digits, dots or underscores.",
       "weakPassword": "Password must be at least 8 characters long.",
       "login": "Login failed.",
       "register": "Registration failed.",
@@ -63,7 +75,8 @@
       "sessionCheck": "Session check failed.",
       "sessionExpired": "Session expired. Please log in again.",
       "invalidServerResponse": "Invalid server response.",
-      "invalidProfileResponse": "Invalid profile response."
+      "invalidProfileResponse": "Invalid profile response.",
+      "usernameUpdate": "Unable to save your username."
     }
   },
   "profile": {
@@ -126,7 +139,9 @@
     },
     "search": {
       "hint": "Search",
-      "noResults": "No results for \"{query}\""
+      "noResults": "No results for \"{query}\"",
+      "usernameHint": "Type a username to find someone new.",
+      "otherUsers": "Other users"
     },
     "suggestions": {
       "title": "Relationship suggestions",
