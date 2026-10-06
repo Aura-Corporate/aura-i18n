@@ -20,21 +20,20 @@ class Translations with BaseTranslations<AppLocale, Translations> {
 	/// Constructing via the enum [AppLocale.build] is preferred.
 	Translations({Map<String, Node>? overrides, PluralResolver? cardinalResolver, PluralResolver? ordinalResolver, TranslationMetadata<AppLocale, Translations>? meta})
 		: assert(overrides == null, 'Set "translation_overrides: true" in order to enable this feature.'),
-		  _meta = meta ?? TranslationMetadata(
+		  $meta = meta ?? TranslationMetadata(
 		    locale: AppLocale.en,
 		    overrides: overrides ?? {},
 		    cardinalResolver: cardinalResolver,
 		    ordinalResolver: ordinalResolver,
 		  ) {
-		_meta.setFlatMapFunction(_flatMapFunction);
+		$meta.setFlatMapFunction(_flatMapFunction);
 	}
 
 	/// Metadata for the translations of <en>.
-	final TranslationMetadata<AppLocale, Translations> _meta;
-	@override TranslationMetadata<AppLocale, Translations> get $meta => _meta;
+	@override final TranslationMetadata<AppLocale, Translations> $meta;
 
 	/// Access flat map
-	dynamic operator[](String key) => _meta.getTranslation(key);
+	dynamic operator[](String key) => $meta.getTranslation(key);
 
 	late final Translations _root = this; // ignore: unused_field
 
@@ -94,6 +93,7 @@ class Translations$auth$en {
 	String get register => 'Sign Up';
 
 	late final Translations$auth$oauth$en oauth = Translations$auth$oauth$en.internal(_root);
+	late final Translations$auth$username$en username = Translations$auth$username$en.internal(_root);
 	late final Translations$auth$error$en error = Translations$auth$error$en.internal(_root);
 }
 
@@ -267,6 +267,9 @@ class Translations$common$fields$en {
 
 	/// en: 'Phone Number'
 	String get phoneNumber => 'Phone Number';
+
+	/// en: 'Username'
+	String get username => 'Username';
 }
 
 // Path: common.actions
@@ -364,6 +367,23 @@ class Translations$auth$oauth$en {
 	late final Translations$auth$oauth$error$en error = Translations$auth$oauth$error$en.internal(_root);
 }
 
+// Path: auth.username
+class Translations$auth$username$en {
+	Translations$auth$username$en.internal(this._root);
+
+	final Translations _root; // ignore: unused_field
+
+	// Translations
+
+	/// en: '3 to 20 characters: lowercase letters, digits, dots or underscores.'
+	String get rules => '3 to 20 characters: lowercase letters, digits, dots or underscores.';
+
+	/// en: 'This username is available.'
+	String get available => 'This username is available.';
+
+	late final Translations$auth$username$choose$en choose = Translations$auth$username$choose$en.internal(_root);
+}
+
 // Path: auth.error
 class Translations$auth$error$en {
 	Translations$auth$error$en.internal(this._root);
@@ -377,6 +397,12 @@ class Translations$auth$error$en {
 
 	/// en: 'This email is already in use.'
 	String get emailInUse => 'This email is already in use.';
+
+	/// en: 'This username is already taken.'
+	String get usernameTaken => 'This username is already taken.';
+
+	/// en: 'Username must be 3 to 20 characters: lowercase letters, digits, dots or underscores.'
+	String get invalidUsername => 'Username must be 3 to 20 characters: lowercase letters, digits, dots or underscores.';
 
 	/// en: 'Password must be at least 8 characters long.'
 	String get weakPassword => 'Password must be at least 8 characters long.';
@@ -413,6 +439,9 @@ class Translations$auth$error$en {
 
 	/// en: 'Invalid profile response.'
 	String get invalidProfileResponse => 'Invalid profile response.';
+
+	/// en: 'Unable to save your username.'
+	String get usernameUpdate => 'Unable to save your username.';
 }
 
 // Path: profile.info
@@ -554,6 +583,12 @@ class Translations$relations$search$en {
 
 	/// en: 'No results for "{query}"'
 	String noResults({required Object query}) => 'No results for "${query}"';
+
+	/// en: 'Type a username to find someone new.'
+	String get usernameHint => 'Type a username to find someone new.';
+
+	/// en: 'Other users'
+	String get otherUsers => 'Other users';
 }
 
 // Path: relations.suggestions
@@ -622,6 +657,24 @@ class Translations$auth$oauth$error$en {
 	String get appleMissingConfig => 'Missing Apple OAuth configuration: APPLE_SERVICE_ID and APPLE_REDIRECT_URI are required.';
 }
 
+// Path: auth.username.choose
+class Translations$auth$username$choose$en {
+	Translations$auth$username$choose$en.internal(this._root);
+
+	final Translations _root; // ignore: unused_field
+
+	// Translations
+
+	/// en: 'Choose your username'
+	String get title => 'Choose your username';
+
+	/// en: 'Your username is unique. Others use it to find you and add you to their relations.'
+	String get subtitle => 'Your username is unique. Others use it to find you and add you to their relations.';
+
+	/// en: 'Continue'
+	String get submit => 'Continue';
+}
+
 // Path: profile.info.error
 class Translations$profile$info$error$en {
 	Translations$profile$info$error$en.internal(this._root);
@@ -667,6 +720,7 @@ extension on Translations {
 			'common.fields.firstName' => 'First Name',
 			'common.fields.lastName' => 'Last Name',
 			'common.fields.phoneNumber' => 'Phone Number',
+			'common.fields.username' => 'Username',
 			'common.actions.edit' => 'Edit',
 			'common.actions.confirm' => 'Confirm',
 			'common.actions.cancel' => 'Cancel',
@@ -693,8 +747,15 @@ extension on Translations {
 			'auth.oauth.error.appleUnavailable' => 'Apple sign-in is not available on this device.',
 			'auth.oauth.error.appleMissingCredential' => 'Apple did not return sign-in credentials.',
 			'auth.oauth.error.appleMissingConfig' => 'Missing Apple OAuth configuration: APPLE_SERVICE_ID and APPLE_REDIRECT_URI are required.',
+			'auth.username.rules' => '3 to 20 characters: lowercase letters, digits, dots or underscores.',
+			'auth.username.available' => 'This username is available.',
+			'auth.username.choose.title' => 'Choose your username',
+			'auth.username.choose.subtitle' => 'Your username is unique. Others use it to find you and add you to their relations.',
+			'auth.username.choose.submit' => 'Continue',
 			'auth.error.invalidCredentials' => 'Invalid email or password.',
 			'auth.error.emailInUse' => 'This email is already in use.',
+			'auth.error.usernameTaken' => 'This username is already taken.',
+			'auth.error.invalidUsername' => 'Username must be 3 to 20 characters: lowercase letters, digits, dots or underscores.',
 			'auth.error.weakPassword' => 'Password must be at least 8 characters long.',
 			'auth.error.login' => 'Login failed.',
 			'auth.error.register' => 'Registration failed.',
@@ -707,6 +768,7 @@ extension on Translations {
 			'auth.error.sessionExpired' => 'Session expired. Please log in again.',
 			'auth.error.invalidServerResponse' => 'Invalid server response.',
 			'auth.error.invalidProfileResponse' => 'Invalid profile response.',
+			'auth.error.usernameUpdate' => 'Unable to save your username.',
 			'profile.info.title' => 'Personal information',
 			'profile.info.error.fieldRequired' => ({required Object field}) => '${field} is required.',
 			'profile.info.error.invalidEmail' => 'Enter a valid email address.',
@@ -744,6 +806,8 @@ extension on Translations {
 			'relations.actions.decline' => 'Decline',
 			'relations.search.hint' => 'Search',
 			'relations.search.noResults' => ({required Object query}) => 'No results for "${query}"',
+			'relations.search.usernameHint' => 'Type a username to find someone new.',
+			'relations.search.otherUsers' => 'Other users',
 			'relations.suggestions.title' => 'Relationship suggestions',
 			'relations.suggestions.mutualFriends' => ({required num n}) => (_root.$meta.cardinalResolver ?? PluralResolvers.cardinal('en'))(n, one: '${n} mutual friend', other: '${n} mutual friends', ), 
 			'relations.suggestions.requestSent' => 'Friend request sent',
