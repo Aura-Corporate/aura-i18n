@@ -256,7 +256,7 @@ class _Translations$auth$username$fr extends Translations$auth$username$en {
 	final TranslationsFr _root; // ignore: unused_field
 
 	// Translations
-	@override String get rules => '3 à 20 caractères : lettres minuscules, chiffres, points ou tirets bas.';
+	@override String get rules => '3 à 20 caractères.';
 	@override String get available => 'Ce nom d\'utilisateur est disponible.';
 	@override late final _Translations$auth$username$choose$fr choose = _Translations$auth$username$choose$fr._(_root);
 }
@@ -271,7 +271,8 @@ class _Translations$auth$error$fr extends Translations$auth$error$en {
 	@override String get invalidCredentials => 'E-mail ou mot de passe invalide.';
 	@override String get emailInUse => 'Cet e-mail est déjà utilisé.';
 	@override String get usernameTaken => 'Ce nom d\'utilisateur est déjà pris.';
-	@override String get invalidUsername => 'Le nom d\'utilisateur doit contenir 3 à 20 caractères : lettres minuscules, chiffres, points ou tirets bas.';
+	@override String get invalidUsername => 'Le nom d\'utilisateur doit contenir 3 à 20 caractères.';
+	@override String invalidUsernameCharacters({required Object characters}) => 'Caractère invalide : ${characters}. Utilisez des lettres, des chiffres, des points ou des tirets bas.';
 	@override String get weakPassword => 'Le mot de passe doit contenir au moins 8 caractères.';
 	@override String get login => 'Échec de la connexion.';
 	@override String get register => 'Échec de l\'inscription.';
@@ -503,7 +504,7 @@ extension on TranslationsFr {
 			'auth.oauth.error.appleUnavailable' => 'La connexion Apple n\'est pas disponible sur cet appareil.',
 			'auth.oauth.error.appleMissingCredential' => 'Apple n\'a pas renvoyé d\'identifiants de connexion.',
 			'auth.oauth.error.appleMissingConfig' => 'Configuration OAuth Apple manquante : APPLE_SERVICE_ID et APPLE_REDIRECT_URI sont requis.',
-			'auth.username.rules' => '3 à 20 caractères : lettres minuscules, chiffres, points ou tirets bas.',
+			'auth.username.rules' => '3 à 20 caractères.',
 			'auth.username.available' => 'Ce nom d\'utilisateur est disponible.',
 			'auth.username.choose.title' => 'Choisissez votre nom d\'utilisateur',
 			'auth.username.choose.subtitle' => 'Votre nom d\'utilisateur est unique. Les autres s\'en servent pour vous trouver et vous ajouter à leurs relations.',
@@ -511,7 +512,8 @@ extension on TranslationsFr {
 			'auth.error.invalidCredentials' => 'E-mail ou mot de passe invalide.',
 			'auth.error.emailInUse' => 'Cet e-mail est déjà utilisé.',
 			'auth.error.usernameTaken' => 'Ce nom d\'utilisateur est déjà pris.',
-			'auth.error.invalidUsername' => 'Le nom d\'utilisateur doit contenir 3 à 20 caractères : lettres minuscules, chiffres, points ou tirets bas.',
+			'auth.error.invalidUsername' => 'Le nom d\'utilisateur doit contenir 3 à 20 caractères.',
+			'auth.error.invalidUsernameCharacters' => ({required Object characters}) => 'Caractère invalide : ${characters}. Utilisez des lettres, des chiffres, des points ou des tirets bas.',
 			'auth.error.weakPassword' => 'Le mot de passe doit contenir au moins 8 caractères.',
 			'auth.error.login' => 'Échec de la connexion.',
 			'auth.error.register' => 'Échec de l\'inscription.',

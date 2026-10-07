@@ -376,8 +376,8 @@ class Translations$auth$username$en {
 
 	// Translations
 
-	/// en: '3 to 20 characters: lowercase letters, digits, dots or underscores.'
-	String get rules => '3 to 20 characters: lowercase letters, digits, dots or underscores.';
+	/// en: '3 to 20 characters.'
+	String get rules => '3 to 20 characters.';
 
 	/// en: 'This username is available.'
 	String get available => 'This username is available.';
@@ -402,8 +402,11 @@ class Translations$auth$error$en {
 	/// en: 'This username is already taken.'
 	String get usernameTaken => 'This username is already taken.';
 
-	/// en: 'Username must be 3 to 20 characters: lowercase letters, digits, dots or underscores.'
-	String get invalidUsername => 'Username must be 3 to 20 characters: lowercase letters, digits, dots or underscores.';
+	/// en: 'Username must be 3 to 20 characters.'
+	String get invalidUsername => 'Username must be 3 to 20 characters.';
+
+	/// en: 'Invalid character: {characters}. Use letters, digits, dots or underscores.'
+	String invalidUsernameCharacters({required Object characters}) => 'Invalid character: ${characters}. Use letters, digits, dots or underscores.';
 
 	/// en: 'Password must be at least 8 characters long.'
 	String get weakPassword => 'Password must be at least 8 characters long.';
@@ -748,7 +751,7 @@ extension on Translations {
 			'auth.oauth.error.appleUnavailable' => 'Apple sign-in is not available on this device.',
 			'auth.oauth.error.appleMissingCredential' => 'Apple did not return sign-in credentials.',
 			'auth.oauth.error.appleMissingConfig' => 'Missing Apple OAuth configuration: APPLE_SERVICE_ID and APPLE_REDIRECT_URI are required.',
-			'auth.username.rules' => '3 to 20 characters: lowercase letters, digits, dots or underscores.',
+			'auth.username.rules' => '3 to 20 characters.',
 			'auth.username.available' => 'This username is available.',
 			'auth.username.choose.title' => 'Choose your username',
 			'auth.username.choose.subtitle' => 'Your username is unique. Others use it to find you and add you to their relations.',
@@ -756,7 +759,8 @@ extension on Translations {
 			'auth.error.invalidCredentials' => 'Invalid email or password.',
 			'auth.error.emailInUse' => 'This email is already in use.',
 			'auth.error.usernameTaken' => 'This username is already taken.',
-			'auth.error.invalidUsername' => 'Username must be 3 to 20 characters: lowercase letters, digits, dots or underscores.',
+			'auth.error.invalidUsername' => 'Username must be 3 to 20 characters.',
+			'auth.error.invalidUsernameCharacters' => ({required Object characters}) => 'Invalid character: ${characters}. Use letters, digits, dots or underscores.',
 			'auth.error.weakPassword' => 'Password must be at least 8 characters long.',
 			'auth.error.login' => 'Login failed.',
 			'auth.error.register' => 'Registration failed.',
