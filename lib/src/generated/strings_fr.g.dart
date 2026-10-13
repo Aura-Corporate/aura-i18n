@@ -77,6 +77,7 @@ class _Translations$auth$fr extends Translations$auth$en {
 	@override String get login => 'Se connecter';
 	@override String get register => 'S\'inscrire';
 	@override late final _Translations$auth$oauth$fr oauth = _Translations$auth$oauth$fr._(_root);
+	@override late final _Translations$auth$username$fr username = _Translations$auth$username$fr._(_root);
 	@override late final _Translations$auth$error$fr error = _Translations$auth$error$fr._(_root);
 }
 
@@ -183,6 +184,7 @@ class _Translations$common$fields$fr extends Translations$common$fields$en {
 	@override String get firstName => 'Prénom';
 	@override String get lastName => 'Nom';
 	@override String get phoneNumber => 'Numéro de téléphone';
+	@override String get username => 'Nom d\'utilisateur';
 }
 
 // Path: common.actions
@@ -247,6 +249,18 @@ class _Translations$auth$oauth$fr extends Translations$auth$oauth$en {
 	@override late final _Translations$auth$oauth$error$fr error = _Translations$auth$oauth$error$fr._(_root);
 }
 
+// Path: auth.username
+class _Translations$auth$username$fr extends Translations$auth$username$en {
+	_Translations$auth$username$fr._(TranslationsFr root) : this._root = root, super.internal(root);
+
+	final TranslationsFr _root; // ignore: unused_field
+
+	// Translations
+	@override String get rules => '3 à 20 caractères.';
+	@override String get available => 'Ce nom d\'utilisateur est disponible.';
+	@override late final _Translations$auth$username$choose$fr choose = _Translations$auth$username$choose$fr._(_root);
+}
+
 // Path: auth.error
 class _Translations$auth$error$fr extends Translations$auth$error$en {
 	_Translations$auth$error$fr._(TranslationsFr root) : this._root = root, super.internal(root);
@@ -256,6 +270,9 @@ class _Translations$auth$error$fr extends Translations$auth$error$en {
 	// Translations
 	@override String get invalidCredentials => 'E-mail ou mot de passe invalide.';
 	@override String get emailInUse => 'Cet e-mail est déjà utilisé.';
+	@override String get usernameTaken => 'Ce nom d\'utilisateur est déjà pris.';
+	@override String get invalidUsername => 'Le nom d\'utilisateur doit contenir 3 à 20 caractères.';
+	@override String invalidUsernameCharacters({required Object characters}) => 'Caractère invalide : ${characters}. Utilisez des lettres, des chiffres, des points ou des tirets bas.';
 	@override String get weakPassword => 'Le mot de passe doit contenir au moins 8 caractères.';
 	@override String get login => 'Échec de la connexion.';
 	@override String get register => 'Échec de l\'inscription.';
@@ -268,6 +285,7 @@ class _Translations$auth$error$fr extends Translations$auth$error$en {
 	@override String get sessionExpired => 'Session expirée. Veuillez vous reconnecter.';
 	@override String get invalidServerResponse => 'Réponse serveur invalide.';
 	@override String get invalidProfileResponse => 'Réponse profil invalide.';
+	@override String get usernameUpdate => 'Impossible d\'enregistrer votre nom d\'utilisateur.';
 }
 
 // Path: profile.info
@@ -364,6 +382,8 @@ class _Translations$relations$search$fr extends Translations$relations$search$en
 	// Translations
 	@override String get hint => 'Rechercher';
 	@override String noResults({required Object query}) => 'Aucun résultat pour « ${query} »';
+	@override String get usernameHint => 'Saisissez un nom d\'utilisateur pour trouver quelqu\'un.';
+	@override String get otherUsers => 'Autres utilisateurs';
 }
 
 // Path: relations.suggestions
@@ -408,6 +428,18 @@ class _Translations$auth$oauth$error$fr extends Translations$auth$oauth$error$en
 	@override String get appleMissingConfig => 'Configuration OAuth Apple manquante : APPLE_SERVICE_ID et APPLE_REDIRECT_URI sont requis.';
 }
 
+// Path: auth.username.choose
+class _Translations$auth$username$choose$fr extends Translations$auth$username$choose$en {
+	_Translations$auth$username$choose$fr._(TranslationsFr root) : this._root = root, super.internal(root);
+
+	final TranslationsFr _root; // ignore: unused_field
+
+	// Translations
+	@override String get title => 'Choisissez votre nom d\'utilisateur';
+	@override String get subtitle => 'Votre nom d\'utilisateur est unique. Les autres s\'en servent pour vous trouver et vous ajouter à leurs relations.';
+	@override String get submit => 'Continuer';
+}
+
 // Path: profile.info.error
 class _Translations$profile$info$error$fr extends Translations$profile$info$error$en {
 	_Translations$profile$info$error$fr._(TranslationsFr root) : this._root = root, super.internal(root);
@@ -445,6 +477,7 @@ extension on TranslationsFr {
 			'common.fields.firstName' => 'Prénom',
 			'common.fields.lastName' => 'Nom',
 			'common.fields.phoneNumber' => 'Numéro de téléphone',
+			'common.fields.username' => 'Nom d\'utilisateur',
 			'common.actions.edit' => 'Modifier',
 			'common.actions.confirm' => 'Confirmer',
 			'common.actions.cancel' => 'Annuler',
@@ -471,8 +504,16 @@ extension on TranslationsFr {
 			'auth.oauth.error.appleUnavailable' => 'La connexion Apple n\'est pas disponible sur cet appareil.',
 			'auth.oauth.error.appleMissingCredential' => 'Apple n\'a pas renvoyé d\'identifiants de connexion.',
 			'auth.oauth.error.appleMissingConfig' => 'Configuration OAuth Apple manquante : APPLE_SERVICE_ID et APPLE_REDIRECT_URI sont requis.',
+			'auth.username.rules' => '3 à 20 caractères.',
+			'auth.username.available' => 'Ce nom d\'utilisateur est disponible.',
+			'auth.username.choose.title' => 'Choisissez votre nom d\'utilisateur',
+			'auth.username.choose.subtitle' => 'Votre nom d\'utilisateur est unique. Les autres s\'en servent pour vous trouver et vous ajouter à leurs relations.',
+			'auth.username.choose.submit' => 'Continuer',
 			'auth.error.invalidCredentials' => 'E-mail ou mot de passe invalide.',
 			'auth.error.emailInUse' => 'Cet e-mail est déjà utilisé.',
+			'auth.error.usernameTaken' => 'Ce nom d\'utilisateur est déjà pris.',
+			'auth.error.invalidUsername' => 'Le nom d\'utilisateur doit contenir 3 à 20 caractères.',
+			'auth.error.invalidUsernameCharacters' => ({required Object characters}) => 'Caractère invalide : ${characters}. Utilisez des lettres, des chiffres, des points ou des tirets bas.',
 			'auth.error.weakPassword' => 'Le mot de passe doit contenir au moins 8 caractères.',
 			'auth.error.login' => 'Échec de la connexion.',
 			'auth.error.register' => 'Échec de l\'inscription.',
@@ -485,6 +526,7 @@ extension on TranslationsFr {
 			'auth.error.sessionExpired' => 'Session expirée. Veuillez vous reconnecter.',
 			'auth.error.invalidServerResponse' => 'Réponse serveur invalide.',
 			'auth.error.invalidProfileResponse' => 'Réponse profil invalide.',
+			'auth.error.usernameUpdate' => 'Impossible d\'enregistrer votre nom d\'utilisateur.',
 			'profile.info.title' => 'Informations personnelles',
 			'profile.info.error.fieldRequired' => ({required Object field}) => 'Le champ ${field} est obligatoire.',
 			'profile.info.error.invalidEmail' => 'Veuillez saisir une adresse e-mail valide.',
@@ -522,6 +564,8 @@ extension on TranslationsFr {
 			'relations.actions.decline' => 'Refuser',
 			'relations.search.hint' => 'Rechercher',
 			'relations.search.noResults' => ({required Object query}) => 'Aucun résultat pour « ${query} »',
+			'relations.search.usernameHint' => 'Saisissez un nom d\'utilisateur pour trouver quelqu\'un.',
+			'relations.search.otherUsers' => 'Autres utilisateurs',
 			'relations.suggestions.title' => 'Suggestions de relations',
 			'relations.suggestions.mutualFriends' => ({required num n}) => (_root.$meta.cardinalResolver ?? PluralResolvers.cardinal('fr'))(n, one: '${n} ami en commun', other: '${n} amis en commun', ), 
 			'relations.suggestions.requestSent' => 'Demande d\'ami envoyée',

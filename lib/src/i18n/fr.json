@@ -7,7 +7,8 @@
       "password": "Mot de passe",
       "firstName": "Prénom",
       "lastName": "Nom",
-      "phoneNumber": "Numéro de téléphone"
+      "phoneNumber": "Numéro de téléphone",
+      "username": "Nom d'utilisateur"
     },
     "actions": {
       "edit": "Modifier",
@@ -49,9 +50,21 @@
         "appleMissingConfig": "Configuration OAuth Apple manquante : APPLE_SERVICE_ID et APPLE_REDIRECT_URI sont requis."
       }
     },
+    "username": {
+      "rules": "3 à 20 caractères.",
+      "available": "Ce nom d'utilisateur est disponible.",
+      "choose": {
+        "title": "Choisissez votre nom d'utilisateur",
+        "subtitle": "Votre nom d'utilisateur est unique. Les autres s'en servent pour vous trouver et vous ajouter à leurs relations.",
+        "submit": "Continuer"
+      }
+    },
     "error": {
       "invalidCredentials": "E-mail ou mot de passe invalide.",
       "emailInUse": "Cet e-mail est déjà utilisé.",
+      "usernameTaken": "Ce nom d'utilisateur est déjà pris.",
+      "invalidUsername": "Le nom d'utilisateur doit contenir 3 à 20 caractères.",
+      "invalidUsernameCharacters": "Caractère invalide : {characters}. Utilisez des lettres, des chiffres, des points ou des tirets bas.",
       "weakPassword": "Le mot de passe doit contenir au moins 8 caractères.",
       "login": "Échec de la connexion.",
       "register": "Échec de l'inscription.",
@@ -63,7 +76,8 @@
       "sessionCheck": "Échec de la vérification de session.",
       "sessionExpired": "Session expirée. Veuillez vous reconnecter.",
       "invalidServerResponse": "Réponse serveur invalide.",
-      "invalidProfileResponse": "Réponse profil invalide."
+      "invalidProfileResponse": "Réponse profil invalide.",
+      "usernameUpdate": "Impossible d'enregistrer votre nom d'utilisateur."
     }
   },
   "profile": {
@@ -126,7 +140,9 @@
     },
     "search": {
       "hint": "Rechercher",
-      "noResults": "Aucun résultat pour « {query} »"
+      "noResults": "Aucun résultat pour « {query} »",
+      "usernameHint": "Saisissez un nom d'utilisateur pour trouver quelqu'un.",
+      "otherUsers": "Autres utilisateurs"
     },
     "suggestions": {
       "title": "Suggestions de relations",
