@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.6.0](https://github.com/Aura-Corporate/aura-i18n/compare/v1.5.0...v1.6.0) (2026-10-13)
+
+
+### Features
+
+* usernames add username and global user search strings ([#18](https://github.com/Aura-Corporate/aura-i18n/issues/18)) ([bbc0154](https://github.com/Aura-Corporate/aura-i18n/commit/bbc0154f1493d2ecc21cb037fbe11237ab7307b7))
+
 ## [1.5.0](https://github.com/Aura-Corporate/aura-i18n/compare/v1.4.0...v1.5.0) (2026-09-25)
 
 
