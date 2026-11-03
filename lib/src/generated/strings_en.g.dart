@@ -446,6 +446,9 @@ class Translations$auth$error$en {
 
 	/// en: 'Unable to save your username.'
 	String get usernameUpdate => 'Unable to save your username.';
+
+	/// en: 'Firebase did not return an identity token.'
+	String get firebaseMissingIdToken => 'Firebase did not return an identity token.';
 }
 
 // Path: profile.info
@@ -774,6 +777,7 @@ extension on Translations {
 			'auth.error.invalidServerResponse' => 'Invalid server response.',
 			'auth.error.invalidProfileResponse' => 'Invalid profile response.',
 			'auth.error.usernameUpdate' => 'Unable to save your username.',
+			'auth.error.firebaseMissingIdToken' => 'Firebase did not return an identity token.',
 			'profile.info.title' => 'Personal information',
 			'profile.info.error.fieldRequired' => ({required Object field}) => '${field} is required.',
 			'profile.info.error.invalidEmail' => 'Enter a valid email address.',
