@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.7.0](https://github.com/Aura-Corporate/aura-i18n/compare/v1.6.0...v1.7.0) (2026-11-03)
+
+
+### Features
+
+* add error message for missing Firebase identity token ([#21](https://github.com/Aura-Corporate/aura-i18n/issues/21)) ([cd09bb5](https://github.com/Aura-Corporate/aura-i18n/commit/cd09bb500cd49d604bb951efb1df81f850fa8a52))
+
 ## [1.6.0](https://github.com/Aura-Corporate/aura-i18n/compare/v1.5.0...v1.6.0) (2026-10-13)
 
 
