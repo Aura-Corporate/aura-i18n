@@ -77,7 +77,8 @@
       "sessionExpired": "Session expired. Please log in again.",
       "invalidServerResponse": "Invalid server response.",
       "invalidProfileResponse": "Invalid profile response.",
-      "usernameUpdate": "Unable to save your username."
+      "usernameUpdate": "Unable to save your username.",
+      "firebaseMissingIdToken": "Firebase did not return an identity token."
     }
   },
   "profile": {

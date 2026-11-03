@@ -77,7 +77,8 @@
       "sessionExpired": "Session expirée. Veuillez vous reconnecter.",
       "invalidServerResponse": "Réponse serveur invalide.",
       "invalidProfileResponse": "Réponse profil invalide.",
-      "usernameUpdate": "Impossible d'enregistrer votre nom d'utilisateur."
+      "usernameUpdate": "Impossible d'enregistrer votre nom d'utilisateur.",
+      "firebaseMissingIdToken": "Firebase n'a pas renvoyé de jeton d'identité."
     }
   },
   "profile": {

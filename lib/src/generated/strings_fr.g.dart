@@ -286,6 +286,7 @@ class _Translations$auth$error$fr extends Translations$auth$error$en {
 	@override String get invalidServerResponse => 'Réponse serveur invalide.';
 	@override String get invalidProfileResponse => 'Réponse profil invalide.';
 	@override String get usernameUpdate => 'Impossible d\'enregistrer votre nom d\'utilisateur.';
+	@override String get firebaseMissingIdToken => 'Firebase n\'a pas renvoyé de jeton d\'identité.';
 }
 
 // Path: profile.info
@@ -527,6 +528,7 @@ extension on TranslationsFr {
 			'auth.error.invalidServerResponse' => 'Réponse serveur invalide.',
 			'auth.error.invalidProfileResponse' => 'Réponse profil invalide.',
 			'auth.error.usernameUpdate' => 'Impossible d\'enregistrer votre nom d\'utilisateur.',
+			'auth.error.firebaseMissingIdToken' => 'Firebase n\'a pas renvoyé de jeton d\'identité.',
 			'profile.info.title' => 'Informations personnelles',
 			'profile.info.error.fieldRequired' => ({required Object field}) => 'Le champ ${field} est obligatoire.',
 			'profile.info.error.invalidEmail' => 'Veuillez saisir une adresse e-mail valide.',
